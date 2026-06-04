@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover" />
-<title>Gauge Frontline 3D - V6 Polished RC</title>
+<title>Gauge War 3D V12 Admin Codes</title>
 <style>
 :root{
   --bg:#06101d;--panel:rgba(8,18,32,.88);--panel2:rgba(13,26,46,.96);
@@ -146,11 +146,42 @@ button:disabled{opacity:.42;filter:grayscale(.78)}
   background:rgba(0,0,0,.66);border:1px solid rgba(255,255,255,.16);font-weight:900;font-size:13px;pointer-events:none;max-width:90%;text-align:center;
 }
 .badge{position:absolute;left:10px;bottom:4px;font-size:10px;color:rgba(255,255,255,.45);pointer-events:none}
+
+.gameLogo{
+  font-size:42px!important;letter-spacing:.04em;line-height:1.02!important;
+  text-shadow:0 0 18px rgba(103,214,255,.65),0 0 34px rgba(255,215,106,.25);
+}
+.battleToolBtns{position:absolute;left:12px;top:86px;display:flex;gap:8px;pointer-events:auto}
+.battleToolBtns button{min-height:40px;padding:8px 10px;border-radius:14px;font-size:12px}
+.tutorialGuide{
+  position:absolute;left:50%;top:128px;transform:translateX(-50%);max-width:min(520px,92vw);
+  padding:10px 14px;border-radius:16px;background:rgba(0,0,0,.58);border:1px solid rgba(255,255,255,.16);
+  font-size:13px;font-weight:900;text-align:center;line-height:1.45;pointer-events:none;box-shadow:0 10px 24px rgba(0,0,0,.28);
+}
+.bossBar{
+  position:absolute;left:50%;top:82px;transform:translateX(-50%);width:min(540px,86vw);padding:8px 10px;
+  background:rgba(44,10,16,.82);border:1px solid rgba(255,120,120,.38);border-radius:14px;box-shadow:0 0 28px rgba(255,70,70,.20);pointer-events:none;
+}
+.bossName{font-size:11px;font-weight:1000;color:#ffd2d2;margin-bottom:5px;letter-spacing:.08em;text-align:center}
+.bossOuter{height:12px;background:rgba(255,255,255,.13);border-radius:999px;overflow:hidden}
+.bossInner{height:100%;width:100%;background:linear-gradient(90deg,#ff4e4e,#ffd76a);border-radius:999px}
+.actionButtons button.kind-unit{border-color:rgba(103,214,255,.55);background:linear-gradient(180deg,rgba(30,70,105,.96),rgba(13,26,46,.96))}
+.actionButtons button.kind-skill{border-color:rgba(255,215,106,.58);background:linear-gradient(180deg,rgba(95,73,28,.96),rgba(13,26,46,.96))}
+.actionButtons button.kind-deploy{border-color:rgba(122,240,162,.55);background:linear-gradient(180deg,rgba(32,86,58,.96),rgba(13,26,46,.96))}
+.actionButtons button.kind-heal{border-color:rgba(220,255,255,.65);background:linear-gradient(180deg,rgba(90,120,128,.96),rgba(13,26,46,.96))}
+.capsule.rarity-r{box-shadow:0 0 34px rgba(103,214,255,.55);background:linear-gradient(145deg,#67d6ff,#e9fbff)}
+.capsule.rarity-sr{box-shadow:0 0 42px rgba(255,215,106,.8);background:linear-gradient(145deg,#ffd76a,#fff4b8)}
+.capsule.rarity-ur{box-shadow:0 0 52px rgba(255,120,255,.8),0 0 80px rgba(103,214,255,.65);background:conic-gradient(#ff6b78,#ffd76a,#7af0a2,#67d6ff,#caa7ff,#ff6b78);animation:urSpin 1.2s linear infinite}
+@keyframes urSpin{to{filter:hue-rotate(360deg)}}
+.missionText{margin-top:8px;color:#dffaff!important;font-weight:900}
+
 @media (max-width:820px){
   .topHud{grid-template-columns:1fr 1fr;gap:8px}
   .centerBox{grid-column:1/3;order:3}
   .pauseBtn{top:126px}
   .gaugeWrap{bottom:222px}
+  .battleToolBtns{top:126px;left:12px}
+  .tutorialGuide{top:166px;font-size:12px}
   .actionButtons{grid-template-columns:repeat(2,1fr);max-height:188px;overflow:auto}
   .actionButtons button{min-height:58px}
   .statRow{grid-template-columns:1fr 1fr}
@@ -163,6 +194,427 @@ button:disabled{opacity:.42;filter:grayscale(.78)}
   .grid2{grid-template-columns:1fr}
   .scoreGrid{grid-template-columns:1fr 1fr}
 }
+
+/* ===== V9 NEON UI POLISH ===== */
+:root{
+  --bg:#030711;
+  --panel:rgba(5,14,29,.72);
+  --panel2:rgba(7,18,36,.92);
+  --line:rgba(103,214,255,.28);
+  --text:#f3fbff;
+  --muted:#9fc1d8;
+  --gold:#ffd76a;
+  --blue:#67d6ff;
+  --green:#7af0a2;
+  --red:#ff5f78;
+  --orange:#ffad5c;
+  --purple:#caa7ff;
+  --cyanGlow:0 0 18px rgba(103,214,255,.42),0 0 42px rgba(103,214,255,.16);
+  --goldGlow:0 0 18px rgba(255,215,106,.48),0 0 42px rgba(255,215,106,.16);
+}
+body{
+  background:
+    radial-gradient(circle at 50% 20%,rgba(103,214,255,.13),transparent 34%),
+    radial-gradient(circle at 80% 75%,rgba(202,167,255,.10),transparent 38%),
+    #030711;
+}
+body:before{
+  content:"";
+  position:fixed;inset:0;
+  pointer-events:none;
+  background:
+    linear-gradient(rgba(103,214,255,.035) 1px,transparent 1px),
+    linear-gradient(90deg,rgba(103,214,255,.035) 1px,transparent 1px);
+  background-size:38px 38px;
+  mask-image:radial-gradient(circle at 50% 50%,black,transparent 82%);
+  z-index:0;
+}
+#game{filter:saturate(1.08) contrast(1.03)}
+.card{
+  background:linear-gradient(180deg,rgba(8,20,40,.78),rgba(4,10,22,.72));
+  border:1px solid rgba(103,214,255,.26);
+  box-shadow:0 14px 38px rgba(0,0,0,.38),var(--cyanGlow);
+}
+button{
+  background:linear-gradient(180deg,rgba(10,28,54,.96),rgba(4,12,25,.96));
+  border:1px solid rgba(103,214,255,.28);
+  box-shadow:0 8px 22px rgba(0,0,0,.30),0 0 14px rgba(103,214,255,.10);
+  transition:transform .08s ease, filter .12s ease, box-shadow .12s ease, border-color .12s ease;
+}
+button:active{
+  transform:scale(.965);
+  filter:brightness(1.25);
+  box-shadow:0 0 28px rgba(103,214,255,.45),inset 0 0 18px rgba(255,255,255,.08);
+}
+button:disabled{
+  opacity:.36;
+  filter:grayscale(.75) brightness(.72);
+  box-shadow:none;
+}
+.gameLogo{
+  font-size:48px!important;
+  color:#f7fdff;
+  text-shadow:
+    0 0 10px rgba(255,255,255,.70),
+    0 0 24px rgba(103,214,255,.85),
+    0 0 52px rgba(202,167,255,.42),
+    0 0 82px rgba(255,215,106,.20);
+  letter-spacing:.08em!important;
+}
+.panel{
+  background:
+    linear-gradient(180deg,rgba(5,16,34,.78),rgba(3,8,18,.82)),
+    radial-gradient(circle at 50% 0,rgba(103,214,255,.18),transparent 48%);
+}
+.menuButtons button{
+  min-height:62px;
+  font-size:15px;
+  letter-spacing:.03em;
+}
+#continueBtn{
+  background:linear-gradient(135deg,rgba(255,215,106,.32),rgba(103,214,255,.20),rgba(202,167,255,.20));
+  border-color:rgba(255,215,106,.55);
+  box-shadow:var(--goldGlow);
+}
+.stat{
+  background:linear-gradient(180deg,rgba(103,214,255,.10),rgba(255,255,255,.04));
+  border-color:rgba(103,214,255,.24);
+}
+.stat b,.countText,.shopPrice{
+  color:var(--gold);
+  text-shadow:0 0 14px rgba(255,215,106,.45);
+}
+.baseBox,.centerBox{
+  border-color:rgba(103,214,255,.28);
+}
+.enemy{
+  border-color:rgba(255,95,120,.34);
+  box-shadow:0 14px 38px rgba(0,0,0,.35),0 0 26px rgba(255,95,120,.14);
+}
+.hpLine{
+  background:rgba(0,0,0,.36);
+  border:1px solid rgba(255,255,255,.12);
+}
+.hpFill{
+  box-shadow:0 0 16px rgba(122,240,162,.55);
+}
+.enemy .hpFill{
+  box-shadow:0 0 16px rgba(255,95,120,.55);
+}
+.gaugeWrap{
+  border-color:rgba(255,215,106,.34);
+  box-shadow:0 12px 32px rgba(0,0,0,.34),0 0 28px rgba(255,215,106,.14);
+}
+.gaugeOuter{
+  position:relative;
+  height:22px;
+  background:rgba(0,0,0,.42);
+  border-color:rgba(103,214,255,.24);
+}
+.gaugeOuter:before{
+  content:"";
+  position:absolute;inset:0;
+  background:repeating-linear-gradient(90deg,transparent 0 9.5%,rgba(255,255,255,.18) 9.5% 10%);
+  opacity:.45;
+  pointer-events:none;
+}
+.gaugeInner{
+  background:linear-gradient(90deg,#2a8cff 0%,#67d6ff 45%,#ffd76a 88%,#fff4b8 100%);
+  box-shadow:0 0 18px rgba(103,214,255,.65),0 0 24px rgba(255,215,106,.35);
+}
+.gaugeWrap.gaugeMax{
+  animation:gaugePulse 1s ease-in-out infinite alternate;
+}
+.gaugeWrap.gaugeMax .gaugeInner{
+  background:linear-gradient(90deg,#ffd76a,#fff4b8,#ffd76a);
+  box-shadow:0 0 24px rgba(255,215,106,.9),0 0 46px rgba(255,215,106,.45);
+}
+.gaugeWrap.gaugeMax .gaugeTop:after{
+  content:"MAX";
+  margin-left:auto;
+  padding:2px 8px;
+  border-radius:999px;
+  color:#172033;
+  background:#ffd76a;
+  box-shadow:0 0 16px rgba(255,215,106,.75);
+  font-size:11px;
+}
+@keyframes gaugePulse{from{filter:brightness(1)}to{filter:brightness(1.22)}}
+
+/* 大きく押しやすい戦闘ボタン */
+.actionButtons{
+  grid-template-columns:repeat(3,1fr);
+  gap:10px;
+  max-height:214px;
+  padding:2px 6px 2px 2px;
+}
+.actionButtons button{
+  min-height:96px;
+  padding:8px 7px;
+  display:flex;
+  flex-direction:column;
+  justify-content:center;
+  align-items:center;
+  gap:2px;
+  border-width:1.5px;
+}
+.actionIcon{
+  display:block;
+  font-size:25px;
+  line-height:1;
+  margin-bottom:2px;
+  text-shadow:0 0 16px currentColor;
+}
+.actionName{
+  display:block;
+  font-size:13px;
+  line-height:1.15;
+}
+.actionButtons button.ready{
+  filter:brightness(1.16);
+  animation:readyPulse 1.25s ease-in-out infinite alternate;
+}
+@keyframes readyPulse{
+  from{box-shadow:0 8px 22px rgba(0,0,0,.3),0 0 14px rgba(103,214,255,.18)}
+  to{box-shadow:0 8px 22px rgba(0,0,0,.3),0 0 24px rgba(103,214,255,.46),inset 0 0 16px rgba(255,255,255,.08)}
+}
+.actionButtons button.kind-unit{
+  color:#eafaff;
+  border-color:rgba(103,214,255,.76);
+  background:linear-gradient(180deg,rgba(34,105,155,.95),rgba(7,22,43,.97));
+  box-shadow:0 0 18px rgba(103,214,255,.22);
+}
+.actionButtons button.kind-armor{
+  color:#effff5;
+  border-color:rgba(122,240,162,.75);
+  background:linear-gradient(180deg,rgba(35,120,70,.95),rgba(7,25,22,.97));
+  box-shadow:0 0 18px rgba(122,240,162,.22);
+}
+.actionButtons button.kind-attackSkill{
+  color:#fff4e7;
+  border-color:rgba(255,95,120,.75);
+  background:linear-gradient(180deg,rgba(140,48,45,.96),rgba(38,12,19,.98));
+  box-shadow:0 0 18px rgba(255,95,120,.24);
+}
+.actionButtons button.kind-skill{
+  color:#fff9df;
+  border-color:rgba(255,215,106,.76);
+  background:linear-gradient(180deg,rgba(125,91,28,.96),rgba(35,23,8,.98));
+  box-shadow:0 0 18px rgba(255,215,106,.25);
+}
+.actionButtons button.kind-deploy{
+  color:#f5edff;
+  border-color:rgba(202,167,255,.78);
+  background:linear-gradient(180deg,rgba(90,55,142,.96),rgba(22,12,38,.98));
+  box-shadow:0 0 18px rgba(202,167,255,.25);
+}
+.actionButtons button.kind-heal{
+  color:#f6ffff;
+  border-color:rgba(220,255,255,.84);
+  background:linear-gradient(180deg,rgba(78,128,138,.96),rgba(12,30,37,.98));
+  box-shadow:0 0 18px rgba(220,255,255,.22);
+}
+.cost{
+  color:#ffe79a;
+  background:rgba(0,0,0,.22);
+  border:1px solid rgba(255,215,106,.20);
+  padding:1px 7px;
+  border-radius:999px;
+}
+.desc{font-size:10px;max-width:100%;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+
+/* 作戦マップ風 */
+.scroll{
+  background:
+    linear-gradient(rgba(103,214,255,.035) 1px,transparent 1px),
+    linear-gradient(90deg,rgba(103,214,255,.035) 1px,transparent 1px),
+    radial-gradient(circle at 50% 0,rgba(103,214,255,.11),transparent 45%),
+    linear-gradient(180deg,rgba(7,20,42,.88),rgba(3,8,18,.92));
+  background-size:34px 34px,34px 34px,auto,auto;
+}
+.area{
+  border-color:rgba(103,214,255,.22);
+  background:linear-gradient(180deg,rgba(103,214,255,.06),rgba(255,255,255,.025));
+}
+.node{
+  background:linear-gradient(180deg,rgba(25,48,86,.96),rgba(7,17,35,.96));
+  border-color:rgba(103,214,255,.32);
+  box-shadow:0 0 18px rgba(103,214,255,.12);
+}
+.node.open{
+  background:linear-gradient(180deg,rgba(24,113,160,.96),rgba(7,34,62,.96));
+  box-shadow:0 0 24px rgba(103,214,255,.42);
+}
+.node.clear{
+  background:linear-gradient(180deg,rgba(28,132,83,.96),rgba(11,55,43,.96));
+  box-shadow:0 0 22px rgba(122,240,162,.32);
+}
+.node.boss{
+  background:linear-gradient(180deg,rgba(146,40,55,.96),rgba(48,8,18,.96));
+  border-color:rgba(255,95,120,.56);
+  box-shadow:0 0 26px rgba(255,95,120,.28);
+}
+.nextTag{
+  box-shadow:0 0 14px rgba(255,215,106,.8);
+}
+
+/* カードUI */
+.itemCard{
+  position:relative;
+  overflow:hidden;
+  background:linear-gradient(180deg,rgba(8,24,48,.76),rgba(4,10,22,.76));
+  border-color:rgba(103,214,255,.18);
+}
+.itemCard:before{
+  content:"";
+  position:absolute;inset:0;
+  background:linear-gradient(120deg,transparent,rgba(255,255,255,.04),transparent);
+  opacity:.8;
+  pointer-events:none;
+}
+.itemCard.rarity-r{border-color:rgba(103,214,255,.42)}
+.itemCard.rarity-sr{border-color:rgba(202,167,255,.58);box-shadow:0 0 22px rgba(202,167,255,.16)}
+.itemCard.rarity-ur{border-color:rgba(255,215,106,.72);box-shadow:0 0 26px rgba(255,215,106,.22)}
+.rarityBadge{
+  display:inline-block;
+  margin-left:6px;
+  padding:1px 6px;
+  border-radius:999px;
+  font-size:10px;
+  font-weight:1000;
+  letter-spacing:.04em;
+}
+.rarity-r .rarityBadge{background:rgba(103,214,255,.18);color:#9eeaff}
+.rarity-sr .rarityBadge{background:rgba(202,167,255,.22);color:#d8c2ff}
+.rarity-ur .rarityBadge{background:rgba(255,215,106,.25);color:#ffe79a}
+.itemCard.inDeck:after{
+  content:"IN DECK";
+  position:absolute;right:10px;top:8px;
+  color:#172033;background:#ffd76a;border-radius:999px;padding:2px 7px;
+  font-size:9px;font-weight:1000;
+}
+.itemCard.equipped:after{
+  content:"EQUIPPED";
+  position:absolute;right:10px;top:8px;
+  color:#0b1b2a;background:#7af0a2;border-radius:999px;padding:2px 7px;
+  font-size:9px;font-weight:1000;
+}
+
+.bossBar{
+  background:linear-gradient(180deg,rgba(80,9,22,.90),rgba(15,3,8,.86));
+  border-color:rgba(255,95,120,.62);
+  box-shadow:0 0 34px rgba(255,95,120,.30),0 0 70px rgba(255,215,106,.12);
+}
+.bossInner{
+  background:linear-gradient(90deg,#ff4262,#ffad5c,#ffd76a);
+  box-shadow:0 0 18px rgba(255,95,120,.65);
+}
+.tutorialGuide{
+  background:linear-gradient(180deg,rgba(5,18,38,.86),rgba(3,8,18,.86));
+  border-color:rgba(103,214,255,.38);
+  box-shadow:0 0 22px rgba(103,214,255,.24),0 10px 24px rgba(0,0,0,.32);
+}
+.toast{
+  background:linear-gradient(90deg,rgba(8,20,42,.92),rgba(32,12,48,.92));
+  border-color:rgba(103,214,255,.32);
+  box-shadow:0 0 24px rgba(103,214,255,.20);
+}
+.badge{
+  color:rgba(220,245,255,.72);
+  text-shadow:0 0 12px rgba(103,214,255,.45);
+}
+@media (max-width:820px){
+  .gameLogo{font-size:38px!important}
+  .actionButtons{grid-template-columns:repeat(2,1fr);max-height:226px}
+  .actionButtons button{min-height:78px}
+  .actionIcon{font-size:22px}
+  .actionName{font-size:12px}
+}
+
+
+/* ===== V10 SAVE + LEGEND GACHA ===== */
+.saveTextArea{width:100%;min-height:160px;resize:vertical;border-radius:16px;border:1px solid rgba(103,214,255,.35);background:rgba(0,0,0,.38);color:#eef7ff;padding:12px;font-family:ui-monospace,SFMono-Regular,Menlo,Consolas,monospace;font-size:12px;outline:none;box-shadow:inset 0 0 18px rgba(103,214,255,.08)}
+.saveTextArea:focus{border-color:rgba(255,215,106,.62);box-shadow:0 0 22px rgba(255,215,106,.18),inset 0 0 18px rgba(103,214,255,.08)}
+.legendButton{background:linear-gradient(135deg,rgba(255,215,106,.46),rgba(202,167,255,.28),rgba(103,214,255,.22))!important;border-color:rgba(255,215,106,.78)!important;box-shadow:0 0 24px rgba(255,215,106,.34),0 0 48px rgba(202,167,255,.16)!important}
+.gachaTwo{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin:10px 0}
+.legendInfo{border:1px solid rgba(255,215,106,.30);background:linear-gradient(180deg,rgba(255,215,106,.10),rgba(202,167,255,.06));border-radius:16px;padding:10px;color:#ffeec0;font-size:13px;line-height:1.55;margin:10px 0;text-align:left}
+.itemCard.legendaryCard{border-color:rgba(255,215,106,.85)!important;box-shadow:0 0 28px rgba(255,215,106,.25),0 0 52px rgba(202,167,255,.10)!important}
+.itemCard.legendaryCard:after{content:"LEGEND";position:absolute;left:10px;top:8px;color:#172033;background:linear-gradient(90deg,#ffd76a,#fff2b8);border-radius:999px;padding:2px 7px;font-size:9px;font-weight:1000}
+.saveMini{font-size:11px;color:var(--muted);line-height:1.5}
+@media (max-width:820px){.gachaTwo{grid-template-columns:1fr}.saveTextArea{min-height:135px}}
+
+/* ===== V11 ADMIN + SURVIVAL ===== */
+.adminBox{
+  margin-top:14px;
+  padding:12px;
+  border-radius:18px;
+  border:1px solid rgba(255,215,106,.28);
+  background:linear-gradient(180deg,rgba(255,215,106,.08),rgba(103,214,255,.05));
+  text-align:left;
+}
+.adminBox label{
+  display:block;
+  font-size:12px;
+  color:var(--muted);
+  margin-bottom:6px;
+  font-weight:900;
+}
+.adminLine{
+  display:grid;
+  grid-template-columns:1fr auto;
+  gap:8px;
+}
+.adminLine input{
+  min-height:48px;
+  border-radius:14px;
+  border:1px solid rgba(103,214,255,.35);
+  background:rgba(0,0,0,.38);
+  color:#eef7ff;
+  padding:0 12px;
+  font-size:18px;
+  font-weight:1000;
+  letter-spacing:.18em;
+  outline:none;
+}
+.adminLine input:focus{
+  border-color:rgba(255,215,106,.65);
+  box-shadow:0 0 18px rgba(255,215,106,.18);
+}
+.adminStatus{
+  margin-top:7px;
+  color:var(--muted);
+  font-size:11px;
+  line-height:1.45;
+}
+.survivalBtn{
+  background:linear-gradient(135deg,rgba(255,95,120,.34),rgba(255,215,106,.20),rgba(103,214,255,.17))!important;
+  border-color:rgba(255,95,120,.68)!important;
+  box-shadow:0 0 26px rgba(255,95,120,.28),0 0 48px rgba(255,215,106,.12)!important;
+}
+.pauseMenu{
+  position:absolute;
+  right:12px;
+  top:136px;
+  width:150px;
+  padding:10px;
+  display:grid;
+  gap:8px;
+  pointer-events:auto;
+  z-index:5;
+}
+.pauseMenu button{
+  min-height:44px;
+}
+.survivalRank{
+  color:#ffd76a;
+  text-shadow:0 0 16px rgba(255,215,106,.45);
+  font-weight:1000;
+}
+@media (max-width:820px){
+  .pauseMenu{top:176px;width:140px}
+  .adminLine{grid-template-columns:1fr}
+}
+
 </style>
 </head>
 <body>
@@ -186,6 +638,10 @@ button:disabled{opacity:.42;filter:grayscale(.78)}
       </div>
     </div>
     <button id="pauseBtn" class="pauseBtn">一時停止</button>
+    <div id="pauseMenu" class="pauseMenu card hidden"><button id="resumeBtn">再開</button><button id="homeFromPauseBtn">ホームへ</button></div>
+    <div class="battleToolBtns"><button id="speedBtn">速度 1x</button></div>
+    <div id="bossBar" class="bossBar hidden"><div id="bossName" class="bossName">BOSS</div><div class="bossOuter"><div id="bossHp" class="bossInner"></div></div></div>
+    <div id="tutorialGuide" class="tutorialGuide hidden"></div>
     <div class="card gaugeWrap">
       <div class="gaugeTop"><span>出撃ゲージ</span><span id="gaugeText">0 / 24</span></div>
       <div class="gaugeOuter"><div id="gaugeInner" class="gaugeInner"></div></div>
@@ -195,8 +651,8 @@ button:disabled{opacity:.42;filter:grayscale(.78)}
 
   <div id="menuScreen" class="screen">
     <div class="card panel">
-      <h1>Gauge Frontline<br>3D V6</h1>
-      <p>3D戦場で部隊を出し、コインで兵器を強化するラインバトルです。</p>
+      <h1 class="gameLogo">Gauge War<br>3D</h1>
+      <p>近未来の作戦UIで部隊を出し、拠点を破壊する3Dラインバトル。</p>
       <div class="statRow">
         <div class="stat"><b id="statLevel">0</b><span>到達Lv</span></div>
         <div class="stat"><b id="statCoins">0</b><span>コイン</span></div>
@@ -213,8 +669,23 @@ button:disabled{opacity:.42;filter:grayscale(.78)}
         <button id="openGachaBtn">ガチャ</button>
       </div>
       <div class="menuButtons">
+        <button id="openCodexBtn">図鑑</button>
+        <button id="openSaveBtn">セーブコード</button>
+      </div>
+      <div class="menuButtons">
+        <button id="startSurvivalBtn" class="survivalBtn">サバイバルモード</button>
         <button id="continueBtn">進行中ステージへ</button>
+      </div>
+      <div class="menuButtons">
         <button id="resetBtn">セーブ初期化</button>
+      </div>
+      <div class="adminBox">
+        <label for="adminCodeInput">管理者コード</label>
+        <div class="adminLine">
+          <input id="adminCodeInput" inputmode="numeric" maxlength="4" placeholder="4桁コード" />
+          <button id="adminCodeBtn">実行</button>
+        </div>
+        <div id="adminStatus" class="adminStatus">10種類の管理者コードを入力できます。</div>
       </div>
     </div>
   </div>
@@ -239,7 +710,7 @@ button:disabled{opacity:.42;filter:grayscale(.78)}
       </div>
       <div class="scroll">
         <div class="topInfo card">
-          <div><b>デッキ最大10個 / 装備最大3個</b><br><span class="small">戦闘ボタンにはデッキ内の所持アイテムだけ表示。装備は自動で効果が出ます。</span></div>
+          <div><b>デッキ最大10個 / 装備最大3個</b><br><span class="small">戦闘ボタンにはデッキ内の所持アイテムだけ表示。V8では足跡・タイヤ跡・発射炎・戦場背景を強化。</span></div>
           <div class="countText" id="deckCount">1 / 10</div>
         </div>
         <div class="area"><h3>デッキアイテム <span>ユニット・スキル・設置物</span></h3><div id="deckGrid" class="grid2"></div></div>
@@ -277,7 +748,11 @@ button:disabled{opacity:.42;filter:grayscale(.78)}
         <div class="stat"><b id="gachaDeck">1/10</b><span>デッキ</span></div>
       </div>
       <div class="capsule" id="capsule">🎫</div>
-      <button id="drawGachaBtn">1回引く</button>
+      <div class="gachaTwo">
+        <button id="drawGachaBtn">通常ガチャ<br><span class="desc">チケット1枚</span></button>
+        <button id="drawLegendGachaBtn" class="legendButton">伝説ガチャ<br><span class="desc">チケット5枚・強武器確定</span></button>
+      </div>
+      <div class="legendInfo">通常：初回は戦車確定。以降は強化中心。<br>伝説：5枚消費で、伝説武器・強スキル・強装備のどれかを確定入手。</div>
       <div class="log" id="gachaLog">チュートリアルをクリアするとチケットがもらえます。</div>
       <div class="menuButtons">
         <button id="gachaShopBtn">ショップへ</button>
@@ -286,10 +761,54 @@ button:disabled{opacity:.42;filter:grayscale(.78)}
     </div>
   </div>
 
+
+  <div id="codexScreen" class="hidden">
+    <div class="card fullPanel">
+      <div class="fullHeader">
+        <button id="codexBackBtn">戻る</button>
+        <h2>図鑑</h2>
+        <button id="codexDeckBtn">デッキ</button>
+      </div>
+      <div class="scroll">
+        <div class="topInfo card">
+          <div><b>ユニット・スキル・装備一覧</b><br><span class="small">所持状況、コスト、レベル、解放条件を確認できます。</span></div>
+          <div class="countText" id="codexCount">0 / 0</div>
+        </div>
+        <div id="codexGrid" class="grid2"></div>
+      </div>
+    </div>
+  </div>
+
+  <div id="saveScreen" class="hidden">
+    <div class="card fullPanel">
+      <div class="fullHeader">
+        <button id="saveBackBtn">戻る</button>
+        <h2>セーブコード</h2>
+        <button id="saveExportBtn">コード作成</button>
+      </div>
+      <div class="scroll">
+        <div class="topInfo card">
+          <div><b>ブラウザ自動保存＋セーブコード保存</b><br><span class="small">ゲームデータは必ずブラウザに自動保存されます。コードをコピーしておくと、別端末や別ブラウザでも途中から再開できます。</span></div>
+          <div class="countText" id="saveStatus">AUTO SAVE ON</div>
+        </div>
+        <div class="area">
+          <h3>セーブコード <span>コピーして保管</span></h3>
+          <textarea id="saveCodeText" class="saveTextArea" placeholder="ここにセーブコードが表示されます。読み込む時はここに貼り付けてください。"></textarea>
+          <div class="menuButtons">
+            <button id="saveCopyBtn">コピー</button>
+            <button id="saveImportBtn">貼り付けたコードで読み込む</button>
+          </div>
+          <p class="saveMini">セーブコードにはゲーム進行状況だけが入ります。個人情報は入っていません。</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
   <div id="resultScreen" class="screen clearBg hidden">
     <div class="resultPanel">
       <h1 id="resultTitle">勝利！</h1>
       <p id="resultText">ステージクリア</p>
+      <p id="missionResult" class="missionText"></p>
       <div class="scoreGrid">
         <div class="scoreCell"><b id="scoreTotal">0</b><span>スコア</span></div>
         <div class="scoreCell"><b id="scoreCoins">0</b><span>獲得コイン</span></div>
@@ -304,7 +823,7 @@ button:disabled{opacity:.42;filter:grayscale(.78)}
   </div>
 
   <div id="toast" class="toast hidden"></div>
-  <div class="badge">V6 POLISHED RC</div>
+  <div class="badge">GAUGE WAR 3D V12 ADMIN CODES</div>
 </div>
 
 <script>
@@ -315,17 +834,33 @@ const canvas = document.getElementById("game");
 const ctx = canvas.getContext("2d");
 const el = {};
 for(const id of [
-  "battleHud","menuScreen","mapScreen","deckScreen","shopScreen","gachaScreen","resultScreen","toast",
-  "playerHp","enemyHp","playerHpText","enemyHpText","stageTitle","stageInfo","gaugeText","gaugeInner","pauseBtn","actionButtons",
-  "statLevel","statCoins","statTickets","statOwned","statDeck","openMapBtn","openDeckBtn","openShopBtn","openGachaBtn","continueBtn","resetBtn",
+  "battleHud","menuScreen","mapScreen","deckScreen","shopScreen","gachaScreen","codexScreen","saveScreen","resultScreen","toast",
+  "playerHp","enemyHp","playerHpText","enemyHpText","stageTitle","stageInfo","gaugeText","gaugeInner","pauseBtn","pauseMenu","resumeBtn","homeFromPauseBtn","speedBtn","bossBar","bossName","bossHp","tutorialGuide","actionButtons",
+  "statLevel","statCoins","statTickets","statOwned","statDeck","openMapBtn","openDeckBtn","openShopBtn","openGachaBtn","openCodexBtn","openSaveBtn","startSurvivalBtn","continueBtn","resetBtn","adminCodeInput","adminCodeBtn","adminStatus",
   "mapAreas","mapScroll","mapBackBtn","mapDeckBtn",
   "deckBackBtn","deckAutoBtn","deckCount","deckGrid","equipGrid",
   "shopBackBtn","shopDeckBtn","shopCoins","shopGrid",
-  "gachaTickets","gachaCoins","gachaTank","gachaOwned","gachaDeck","capsule","drawGachaBtn","gachaLog","gachaShopBtn","gachaBackBtn",
-  "resultTitle","resultText","scoreTotal","scoreCoins","scoreKills","scoreTime","resultMapBtn","resultNextBtn"
+  "codexBackBtn","codexDeckBtn","codexCount","codexGrid","saveBackBtn","saveExportBtn","saveCopyBtn","saveImportBtn","saveCodeText","saveStatus",
+  "gachaTickets","gachaCoins","gachaTank","gachaOwned","gachaDeck","capsule","drawGachaBtn","drawLegendGachaBtn","gachaLog","gachaShopBtn","gachaBackBtn",
+  "resultTitle","resultText","missionResult","scoreTotal","scoreCoins","scoreKills","scoreTime","resultMapBtn","resultNextBtn"
 ]) el[id] = document.getElementById(id);
 
-const SAVE_KEY = "gauge_frontline_v5_release_candidate";
+const SAVE_KEY = "gauge_war_3d_v12_admin_codes";
+const SAVE_MIGRATE_KEYS = ["gauge_war_3d_v11_admin_survival","gauge_war_3d_v10_save_legend"];
+const SAVE_BACKUP_KEY = SAVE_KEY + "_backup";
+const SAVE_AUTOSAVE_KEY = SAVE_KEY + "_autosave";
+const ADMIN_CODES = {
+  "7394": {name:"基本支援", type:"starter"},
+  "4827": {name:"コイン補給", type:"coins"},
+  "9156": {name:"チケット補給", type:"tickets"},
+  "2608": {name:"通常武器解放", type:"standardWeapons"},
+  "6043": {name:"伝説武器解放", type:"legendWeapons"},
+  "1379": {name:"装備解放", type:"equips"},
+  "8261": {name:"全アイテム解放", type:"allItems"},
+  "3905": {name:"全武器レベルMAX", type:"maxWeapons"},
+  "5718": {name:"資源上限MAX", type:"maxResources"},
+  "7482": {name:"完全MAX", type:"everythingMax"}
+};
 const MAX_LEVEL = 50, MAX_DECK = 10, MAX_EQUIP = 3, MAX_GAUGE = 24;
 const FIELD_W = 1000, PLAYER_BASE = 70, ENEMY_BASE = 930;
 
@@ -346,22 +881,35 @@ const ITEMS = {
   artillery:{label:"榴弾砲",icon:"◎",kind:"skill",role:"範囲砲撃",cost:16,unlock:"Lv.35"},
   drone:{label:"ドローン爆撃",icon:"◇",kind:"skill",role:"ショップ限定・連続爆撃",cost:18,unlock:"ショップ",shopOnly:true,price:2100},
   bunker:{label:"バンカー",icon:"▥",kind:"deploy",role:"ショップ限定・射撃拠点",cost:15,unlock:"ショップ",shopOnly:true,price:1800},
+  pulseSoldier:{label:"パルス兵",icon:"◈",kind:"unit",role:"伝説・高速射撃",cost:6,unlock:"伝説ガチャ",legend:true,hp:88,speed:48,range:150,damage:22,cooldown:.62,radius:13,hit:.86,color:"#8ff7ff",enemyColor:"#8ff7ff"},
+  empLauncher:{label:"EMP兵",icon:"⌬",kind:"unit",role:"伝説・敵を遅くする",cost:9,unlock:"伝説ガチャ",legend:true,hp:90,speed:31,range:165,damage:42,cooldown:1.55,radius:14,hit:.78,color:"#caa7ff",enemyColor:"#caa7ff",splash:38,emp:true},
+  plasmaTank:{label:"プラズマ戦車",icon:"▰",kind:"unit",role:"伝説・高火力戦車",cost:14,unlock:"伝説ガチャ",legend:true,hp:330,speed:22,range:185,damage:72,cooldown:1.72,radius:27,hit:.88,color:"#8dffcc",enemyColor:"#8dffcc",splash:48},
+  laserDrone:{label:"レーザードローン",icon:"✧",kind:"skill",role:"伝説・敵を連続狙撃",cost:12,unlock:"伝説ガチャ",legend:true},
+  orbitalLaser:{label:"軌道レーザー",icon:"☄",kind:"skill",role:"伝説・直線大ダメージ",cost:20,unlock:"伝説ガチャ",legend:true},
+  missileSilo:{label:"ミサイルサイロ",icon:"▧",kind:"deploy",role:"伝説・自動ミサイル",cost:17,unlock:"伝説ガチャ",legend:true},
+  nanoArmor:{label:"ナノ装甲",icon:"⬢",kind:"equip",role:"伝説装備・全味方HP+18%",unlock:"伝説ガチャ",legend:true},
+  overdriveCore:{label:"オーバードライブコア",icon:"◎",kind:"equip",role:"伝説装備・ゲージ速度+12%",unlock:"伝説ガチャ",legend:true},
   armor:{label:"装甲プレート",icon:"⬟",kind:"equip",role:"全味方HP+10%",unlock:"ショップ",price:900},
   scope:{label:"照準システム",icon:"⌖",kind:"equip",role:"命中率+8%",unlock:"ショップ",price:900},
   gaugeCore:{label:"ゲージコア",icon:"◉",kind:"equip",role:"最大ゲージ+4",unlock:"ショップ",price:1200},
   coinCharm:{label:"コインチャーム",icon:"¤",kind:"equip",role:"獲得コイン+15%",unlock:"ショップ",price:1600}
 };
-const ITEM_ORDER = ["rifle","shield","tank","rocket","medic","heavy","railgun","air","wall","repair","rush","mine","smoke","artillery","drone","bunker","armor","scope","gaugeCore","coinCharm"];
+const ITEM_ORDER = ["rifle","shield","tank","rocket","medic","heavy","railgun","pulseSoldier","empLauncher","plasmaTank","air","wall","repair","rush","mine","smoke","artillery","drone","bunker","laserDrone","orbitalLaser","missileSilo","armor","scope","gaugeCore","coinCharm","nanoArmor","overdriveCore"];
 const SHOP_ITEMS = [
   {type:"ticket",label:"ガチャチケット",icon:"🎫",role:"ガチャを1回引ける",price:300,repeat:true},
   {type:"item",key:"railgun"},{type:"item",key:"drone"},{type:"item",key:"bunker"},
-  {type:"item",key:"armor"},{type:"item",key:"scope"},{type:"item",key:"gaugeCore"},{type:"item",key:"coinCharm"}
+  {type:"item",key:"armor"},{type:"item",key:"scope"},{type:"item",key:"gaugeCore"},{type:"item",key:"coinCharm"},
+  {type:"upgrade",key:"rifle",label:"ライフル兵強化",icon:"▰",role:"攻撃力とHPを少し上げる",basePrice:300},
+  {type:"upgrade",key:"tank",label:"戦車強化",icon:"▱",role:"戦車の火力と耐久を上げる",basePrice:600},
+  {type:"upgrade",key:"baseHp",label:"拠点HP強化",icon:"⬢",role:"自軍拠点HPを増やす",basePrice:800},
+  {type:"upgrade",key:"startGauge",label:"初期ゲージ+1",icon:"◌",role:"バトル開始時のゲージを増やす",basePrice:1000}
 ];
+const LEGENDARY_KEYS = ["pulseSoldier","empLauncher","plasmaTank","laserDrone","orbitalLaser","missileSilo","nanoArmor","overdriveCore"];
 
-let W=0,H=0,DPR=1,screen="menu",battle=null,last=performance.now(),toastTimer=0;
+let W=0,H=0,DPR=1,screen="menu",battle=null,last=performance.now(),toastTimer=0,battleSpeed=1;
 
 function defaultSave(){
-  return {tutorialCleared:false,unlockedLevel:0,completed:{},tickets:0,coins:0,bestScore:{},owned:{rifle:true},power:{},deck:["rifle"],equips:[]};
+  return {tutorialCleared:false,unlockedLevel:0,completed:{},tickets:0,coins:0,bestScore:{},bestSurvival:{score:0,rank:"-",time:0,kills:0},owned:{rifle:true},power:{},deck:["rifle"],equips:[],upgrades:{rifle:0,tank:0,baseHp:0,startGauge:0},lossStreak:{},adminUsed:false,adminCodesUsed:{}};
 }
 let save = loadSave();
 
@@ -374,6 +922,12 @@ function normalizeSave(s){
   for(const k of ITEM_ORDER) if(typeof s.power[k] !== "number") s.power[k] = 0;
   s.completed = s.completed || {};
   s.bestScore = s.bestScore || {};
+  s.lossStreak = s.lossStreak || {};
+  s.bestSurvival = Object.assign({score:0,rank:"-",time:0,kills:0}, s.bestSurvival || {});
+  s.adminCodesUsed = s.adminCodesUsed || {};
+  if(s.adminUsed && !s.adminCodesUsed["7394"]) s.adminCodesUsed["7394"] = true;
+  s.adminUsed = !!s.adminUsed;
+  s.upgrades = Object.assign({rifle:0,tank:0,baseHp:0,startGauge:0}, s.upgrades || {});
   s.deck = Array.isArray(s.deck) ? s.deck : ["rifle"];
   s.deck = [...new Set(s.deck)].filter(k => ITEMS[k] && s.owned[k] && ITEMS[k].kind !== "equip").slice(0,MAX_DECK);
   if(!s.deck.length) s.deck = ["rifle"];
@@ -381,8 +935,45 @@ function normalizeSave(s){
   if(typeof s.coins !== "number") s.coins = 0;
   return s;
 }
-function loadSave(){try{return normalizeSave(JSON.parse(localStorage.getItem(SAVE_KEY) || "null"))}catch(e){return defaultSave()}}
-function writeSave(){save=normalizeSave(save);localStorage.setItem(SAVE_KEY,JSON.stringify(save))}
+function safeReadSave(key){
+  try{const raw=localStorage.getItem(key);if(!raw)return null;return JSON.parse(raw)}catch(e){return null}
+}
+function loadSave(){
+  let loaded = safeReadSave(SAVE_KEY) || safeReadSave(SAVE_BACKUP_KEY) || safeReadSave(SAVE_AUTOSAVE_KEY);
+  if(!loaded && Array.isArray(SAVE_MIGRATE_KEYS)){
+    for(const k of SAVE_MIGRATE_KEYS){
+      loaded = safeReadSave(k) || safeReadSave(k+"_backup") || safeReadSave(k+"_autosave");
+      if(loaded) break;
+    }
+  }
+  return normalizeSave(loaded || null);
+}
+function writeSave(){
+  save=normalizeSave(save);
+  const raw=JSON.stringify(save);
+  try{
+    localStorage.setItem(SAVE_BACKUP_KEY, localStorage.getItem(SAVE_KEY) || raw);
+    localStorage.setItem(SAVE_KEY, raw);
+    localStorage.setItem(SAVE_AUTOSAVE_KEY, raw);
+  }catch(e){try{localStorage.setItem(SAVE_KEY, raw)}catch(_){}}
+}
+function saveChecksum(str){let n=0;for(let i=0;i<str.length;i++)n=(n+str.charCodeAt(i)*(i+1))%1000000007;return n.toString(36).toUpperCase()}
+function makeSaveCode(){
+  writeSave();
+  const payload=JSON.stringify({v:12,game:"Gauge War 3D",time:Date.now(),save});
+  const body=btoa(unescape(encodeURIComponent(payload)));
+  return "GW3D12."+saveChecksum(body)+"."+body;
+}
+function loadSaveCode(code){
+  const raw=(code||"").trim(),parts=raw.split(".");
+  if(parts.length!==3||!["GW3D10","GW3D11","GW3D12"].includes(parts[0]))throw new Error("セーブコードの形式が違います");
+  if(saveChecksum(parts[2])!==parts[1])throw new Error("セーブコードが壊れている可能性があります");
+  const data=JSON.parse(decodeURIComponent(escape(atob(parts[2]))));
+  if(!data||!data.save)throw new Error("セーブデータが見つかりません");
+  save=normalizeSave(data.save);writeSave();return true;
+}
+function renderSaveCode(){if(!el.saveCodeText)return;el.saveCodeText.value=makeSaveCode();el.saveStatus.textContent="SAVED"}
+setInterval(()=>{try{writeSave()}catch(e){}},15000);
 
 function resize(){
   DPR=Math.min(devicePixelRatio||1,2);W=Math.floor(innerWidth);H=Math.floor(innerHeight);
@@ -401,18 +992,22 @@ function hasDeckUnit(){return save.deck.some(k=>ITEMS[k]&&ITEMS[k].kind==="unit"
 function hasEquip(k){return save.equips.includes(k)}
 function showToast(text){el.toast.textContent=text;el.toast.classList.remove("hidden");toastTimer=2.3}
 function coinBonusMult(){return hasEquip("coinCharm")?1.15:1}
+function battleShakeGacha(power){document.body.animate([{filter:"brightness(1.6)"},{filter:"brightness(1)"}],{duration:420});}
 
 function showScreen(next){
   screen=next;
-  for(const [id,name] of [["menuScreen","menu"],["mapScreen","map"],["deckScreen","deck"],["shopScreen","shop"],["gachaScreen","gacha"],["resultScreen","result"]]){
+  for(const [id,name] of [["menuScreen","menu"],["mapScreen","map"],["deckScreen","deck"],["shopScreen","shop"],["gachaScreen","gacha"],["codexScreen","codex"],["saveScreen","save"],["resultScreen","result"]]){
     el[id].classList.toggle("hidden",next!==name);
   }
   el.battleHud.classList.toggle("hidden",next!=="battle");
+  if(next!=="battle"){el.bossBar.classList.add("hidden");el.tutorialGuide.classList.add("hidden");if(el.pauseMenu)el.pauseMenu.classList.add("hidden");}
   if(next==="menu") renderMenu();
   if(next==="map") renderMap();
   if(next==="deck") renderDeck();
   if(next==="shop") renderShop();
   if(next==="gacha") renderGacha();
+  if(next==="codex") renderCodex();
+  if(next==="save") renderSaveCode();
   updateBattleUI();
 }
 
@@ -445,6 +1040,103 @@ function rewardText(id,short){
   return"コイン";
 }
 
+
+function capResources(){
+  save.coins = Math.min(999999, Math.max(save.coins || 0, 999999));
+  save.tickets = Math.min(9999, Math.max(save.tickets || 0, 9999));
+}
+function unlockItemSet(keys){
+  for(const key of keys){
+    if(ITEMS[key]) save.owned[key] = true;
+  }
+}
+function unlockAllItems(){
+  for(const key of ITEM_ORDER){
+    if(ITEMS[key]) save.owned[key] = true;
+  }
+}
+function maxWeaponLevels(){
+  for(const key of ITEM_ORDER){
+    if(ITEMS[key] && ITEMS[key].kind !== "equip"){
+      save.power[key] = Math.max(save.power[key] || 0, 99);
+    }
+  }
+}
+function maxUpgrades(){
+  save.upgrades = Object.assign({rifle:0,tank:0,baseHp:0,startGauge:0}, save.upgrades || {});
+  save.upgrades.rifle = Math.max(save.upgrades.rifle || 0, 20);
+  save.upgrades.tank = Math.max(save.upgrades.tank || 0, 20);
+  save.upgrades.baseHp = Math.max(save.upgrades.baseHp || 0, 20);
+  save.upgrades.startGauge = Math.max(save.upgrades.startGauge || 0, 8);
+}
+function autoFillDeckAndEquips(){
+  const deckPriority=["rifle","shield","tank","rocket","medic","heavy","railgun","pulseSoldier","empLauncher","plasmaTank","laserDrone","orbitalLaser","missileSilo","air","wall","repair","rush","mine","smoke","artillery","drone","bunker"];
+  save.deck = [];
+  for(const key of deckPriority){
+    if(save.owned[key] && ITEMS[key] && ITEMS[key].kind !== "equip" && save.deck.length < MAX_DECK) save.deck.push(key);
+  }
+  if(!save.deck.length) save.deck=["rifle"];
+  const equipPriority=["nanoArmor","overdriveCore","gaugeCore","coinCharm","armor","scope"];
+  save.equips = [];
+  for(const key of equipPriority){
+    if(save.owned[key] && ITEMS[key] && ITEMS[key].kind === "equip" && save.equips.length < MAX_EQUIP) save.equips.push(key);
+  }
+}
+function applyAdminReward(type){
+  const standardWeapons=["tank","rocket","medic","heavy","railgun","air","wall","repair","rush","mine","smoke","artillery","drone","bunker"];
+  const legendWeapons=["pulseSoldier","empLauncher","plasmaTank","laserDrone","orbitalLaser","missileSilo"];
+  const equips=["armor","scope","gaugeCore","coinCharm","nanoArmor","overdriveCore"];
+  if(type==="starter"){
+    save.coins += 12000;
+    save.tickets += 30;
+    unlockItemSet(["tank","rocket","railgun","drone","bunker"]);
+  }
+  if(type==="coins") save.coins += 50000;
+  if(type==="tickets") save.tickets += 100;
+  if(type==="standardWeapons") unlockItemSet(standardWeapons);
+  if(type==="legendWeapons") unlockItemSet(legendWeapons);
+  if(type==="equips") unlockItemSet(equips);
+  if(type==="allItems") unlockAllItems();
+  if(type==="maxWeapons"){
+    unlockItemSet([...standardWeapons,...legendWeapons]);
+    maxWeaponLevels();
+  }
+  if(type==="maxResources") capResources();
+  if(type==="everythingMax"){
+    unlockAllItems();
+    capResources();
+    maxWeaponLevels();
+    maxUpgrades();
+    save.tutorialCleared = true;
+    save.unlockedLevel = MAX_LEVEL;
+    for(let i=0;i<=MAX_LEVEL;i++) save.completed[i] = true;
+  }
+  autoFillDeckAndEquips();
+}
+function applyAdminCode(){
+  const code=(el.adminCodeInput&&el.adminCodeInput.value||"").trim();
+  const entry=ADMIN_CODES[code];
+  if(!entry){
+    if(el.adminStatus)el.adminStatus.textContent="コードが違います。";
+    showToast("管理者コードが違います");
+    return;
+  }
+  save.adminCodesUsed = save.adminCodesUsed || {};
+  if(save.adminCodesUsed[code]){
+    if(el.adminStatus)el.adminStatus.textContent=`${entry.name} は適用済みです。`;
+    showToast("この管理者コードは適用済みです");
+    return;
+  }
+  save.adminCodesUsed[code] = true;
+  save.adminUsed = true;
+  applyAdminReward(entry.type);
+  writeSave();
+  renderMenu();
+  if(el.adminCodeInput) el.adminCodeInput.value = "";
+  if(el.adminStatus)el.adminStatus.textContent=`${entry.name} を適用しました。`;
+  showToast(`管理者コード適用：${entry.name}`);
+}
+
 function renderMenu(){
   save=normalizeSave(save);
   el.statLevel.textContent=currentReached();
@@ -453,6 +1145,11 @@ function renderMenu(){
   el.statOwned.textContent=ownedCount();
   el.statDeck.textContent=`${save.deck.length}/${MAX_DECK}`;
   el.continueBtn.textContent=save.tutorialCleared?`Lv.${Math.min(save.unlockedLevel,MAX_LEVEL)}へ進む`:"チュートリアルへ";
+  if(el.startSurvivalBtn){
+    const best=save.bestSurvival&&save.bestSurvival.score?`BEST ${save.bestSurvival.score} / ${save.bestSurvival.rank}`:"陣地が倒れるまで戦う";
+    el.startSurvivalBtn.innerHTML=`サバイバルモード<br><span class="desc">${best}</span>`;
+  }
+  if(el.adminStatus){const used=Object.keys(save.adminCodesUsed||{}).length;el.adminStatus.textContent = used ? `管理者コード ${used}/10 種類を適用済みです。` : "10種類の4桁管理者コードを入力できます。";}
 }
 
 function renderMap(){
@@ -475,7 +1172,8 @@ function createStageNode(id){
   if(id===0)n.classList.add("tutorial");if(isBossLevel(id))n.classList.add("boss");
   n.classList.add(clear?"clear":open?"open":"lock");
   const label=id===0?"TUTORIAL":isBossLevel(id)?`BOSS ${id}`:`Lv.${id}`;
-  n.innerHTML=`${next?'<span class="nextTag">NEXT</span>':""}${label}<small>${clear?"CLEAR":open?"OPEN":"LOCK"}<br><span class="rewardTag">${rewardText(id,true)}</span></small>`;
+  const nodeIcon=id===0?"◇":isBossLevel(id)?"⚠":"◆";
+  n.innerHTML=`${next?'<span class="nextTag">NEXT</span>':""}<span style="font-size:18px">${nodeIcon}</span>${label}<small>${clear?"CLEAR":open?"OPEN":"LOCK"}<br><span class="rewardTag">${rewardText(id,true)}</span></small>`;
   n.addEventListener("click",()=>{if(!isStageUnlocked(id)){showToast("まだロックされています");return}if(!hasDeckUnit()){showToast("デッキにユニットを1体以上入れてください");showScreen("deck");return}startStage(id)});
   return n;
 }
@@ -490,11 +1188,32 @@ function renderDeck(){
     else renderDeckCard(key);
   }
 }
+
+function itemRarity(key){
+  if((ITEMS[key]&&ITEMS[key].legend) || ["railgun","drone","artillery","heavy","gaugeCore","coinCharm"].includes(key)) return "UR";
+  if(["tank","rocket","medic","bunker","armor","scope","smoke"].includes(key)) return "SR";
+  return "R";
+}
+function actionKind(key,item){
+  if(key==="repair" || key==="medic") return "heal";
+  if(item.kind==="deploy") return "deploy";
+  if(item.kind==="skill"){
+    if(["air","artillery","drone"].includes(key)) return "attackSkill";
+    return "skill";
+  }
+  if(["tank","heavy","plasmaTank"].includes(key)) return "armor";
+  return "unit";
+}
+function actionButtonHTML(key, item, reason){
+  return `<span class="actionIcon">${item.icon}</span><span class="actionName">${item.label}</span><span class="cost">${item.cost}G</span><span class="desc">${reason}</span>`;
+}
+
 function itemCardBase(key){
   const item=ITEMS[key],owned=!!save.owned[key],power=save.power[key]||0;
+  const rarity=itemRarity(key);
   const card=document.createElement("div");
-  card.className=`itemCard ${owned?"":"locked"}`;
-  card.innerHTML=`<div class="itemIcon">${item.icon}</div><div class="itemInfo"><b>${item.label} ${owned?`<span style="color:var(--gold);font-size:11px">Lv.${power}</span>`:""}</b><span>${item.role}${item.cost?` / ${item.cost}G`:""}<br>${owned?"所持中":"未所持："+item.unlock}</span></div>`;
+  card.className=`itemCard rarity-${rarity.toLowerCase()} ${ITEMS[key].legend?"legendaryCard":""} ${owned?"":"locked"}`;
+  card.innerHTML=`<div class="itemIcon">${item.icon}</div><div class="itemInfo"><b>${item.label}<span class="rarityBadge">${rarity}</span> ${owned?`<span style="color:var(--gold);font-size:11px">Lv.${power}</span>`:""}</b><span>${item.role}${item.cost?` / ${item.cost}G`:""}<br>${owned?"所持中":"未所持："+item.unlock}</span></div>`;
   return card;
 }
 function renderDeckCard(key){
@@ -529,19 +1248,29 @@ function renderShop(){
   el.shopGrid.innerHTML="";
   for(const entry of SHOP_ITEMS){
     const card=document.createElement("div");card.className="itemCard";
-    let label,icon,role,price,owned=false,key=null,repeat=false;
-    if(entry.type==="ticket"){label=entry.label;icon=entry.icon;role=entry.role;price=entry.price;repeat=true}
-    else{key=entry.key;const item=ITEMS[key];label=item.label;icon=item.icon;role=item.role;price=item.price;owned=!!save.owned[key]}
+    let label,icon,role,price,owned=false,key=null,repeat=false,level=0;
+    if(entry.type==="ticket"){
+      label=entry.label;icon=entry.icon;role=entry.role;price=entry.price;repeat=true;
+    }else if(entry.type==="upgrade"){
+      key=entry.key;level=save.upgrades[key]||0;label=entry.label;icon=entry.icon;role=`${entry.role} / 現在 Lv.${level}`;price=Math.floor(entry.basePrice*(1+level*.62));repeat=true;
+    }else{
+      key=entry.key;const item=ITEMS[key];label=item.label;icon=item.icon;role=item.role;price=item.price;owned=!!save.owned[key];
+    }
+    if(key&&ITEMS[key])card.classList.add("rarity-"+itemRarity(key).toLowerCase());
     if(owned)card.classList.add("inDeck");
-    card.innerHTML=`<div class="itemIcon">${icon}</div><div class="itemInfo"><b>${label}</b><span>${role}<br><span class="shopPrice">${price} COIN</span>${owned?" / 購入済み":""}</span></div>`;
+    const rarityText=key&&ITEMS[key]?`<span class="rarityBadge">${itemRarity(key)}</span>`:"";
+    card.innerHTML=`<div class="itemIcon">${icon}</div><div class="itemInfo"><b>${label}${rarityText}</b><span>${role}<br><span class="shopPrice">${price} COIN</span>${owned&&!repeat?" / 購入済み":""}</span></div>`;
     const btn=document.createElement("button");
     btn.textContent=owned&&!repeat?"購入済":save.coins>=price?"買う":"不足";
     btn.disabled=(owned&&!repeat)||save.coins<price;
     btn.addEventListener("click",()=>{
       if(save.coins<price)return;
       save.coins-=price;
-      if(entry.type==="ticket"){save.tickets+=1;showToast("ガチャチケットを購入しました")}
-      else{
+      if(entry.type==="ticket"){
+        save.tickets+=1;showToast("ガチャチケットを購入しました");
+      }else if(entry.type==="upgrade"){
+        save.upgrades[key]=(save.upgrades[key]||0)+1;showToast(`${label} Lv.${save.upgrades[key]} に強化しました`);
+      }else{
         save.owned[key]=true;
         if(ITEMS[key].kind!=="equip"&&save.deck.length<MAX_DECK)save.deck.push(key);
         showToast(`${ITEMS[key].label}を購入しました`);
@@ -552,19 +1281,37 @@ function renderShop(){
   }
 }
 
+function renderCodex(){
+  el.codexCount.textContent=`${ownedCount()} / ${ITEM_ORDER.length}`;
+  el.codexGrid.innerHTML="";
+  for(const key of ITEM_ORDER){
+    const item=ITEMS[key];
+    const owned=!!save.owned[key];
+    const level=save.power[key]||0;
+    const card=document.createElement("div");
+    const rarity=itemRarity(key);
+    card.className=`itemCard rarity-${rarity.toLowerCase()} ${ITEMS[key].legend?"legendaryCard":""} ${owned?"":"locked"}`;
+    const cost=item.cost?`${item.cost}G`:(item.kind==="equip"?"装備":"-");
+    card.innerHTML=`<div class="itemIcon">${item.icon}</div><div class="itemInfo"><b>${item.label}<span class="rarityBadge">${rarity}</span> ${owned?`<span style="color:var(--gold);font-size:11px">Lv.${level}</span>`:""}</b><span>${item.role}<br>種類：${item.kind} / コスト：${cost}<br>${owned?"所持中":"解放条件："+item.unlock}</span></div>`;
+    el.codexGrid.appendChild(card);
+  }
+}
+
 function renderGacha(){
   el.gachaTickets.textContent=save.tickets;el.gachaCoins.textContent=save.coins;
   el.gachaTank.textContent=save.owned.tank?"所持済":"未所持";el.gachaOwned.textContent=ownedCount();el.gachaDeck.textContent=`${save.deck.length}/${MAX_DECK}`;
   el.drawGachaBtn.disabled=save.tickets<=0;
-  if(!save.tutorialCleared){el.gachaLog.textContent="まずはチュートリアルをクリアして、ガチャチケットを手に入れよう。";el.capsule.textContent="🎫"}
-  else if(!save.owned.tank){el.gachaLog.textContent="初回ガチャは戦車が確定で出ます。\n2回目以降：R75% / SR20% / UR5%";el.capsule.textContent="🎫"}
+  el.drawLegendGachaBtn.disabled=save.tickets<5;
+  if(!save.tutorialCleared){el.gachaLog.textContent="まずはチュートリアルをクリアして、ガチャチケットを手に入れよう。";el.capsule.className="capsule";el.capsule.textContent="🎫"}
+  else if(!save.owned.tank){el.gachaLog.textContent="通常ガチャ初回は戦車が確定。\n伝説ガチャは5枚で強武器・強装備が確定。";el.capsule.className="capsule";el.capsule.textContent="🎫"}
+  else{el.gachaLog.textContent="通常：R75% / SR20% / UR5%\n伝説：チケット5枚で伝説武器・強装備を確定入手。";}
 }
 function drawGacha(){
   if(save.tickets<=0){showToast("チケットがありません");return}
   save.tickets-=1;
   if(!save.owned.tank){
     save.owned.tank=true;if(save.deck.length<MAX_DECK)save.deck.push("tank");
-    el.capsule.textContent=ITEMS.tank.icon;
+    el.capsule.className="capsule rarity-ur";battleShakeGacha(10);el.capsule.textContent=ITEMS.tank.icon;
     el.gachaLog.textContent="★★★★ UR確定！\n戦車を解放しました。\nデッキにも自動で入りました。";
   }else{
     const owned=ITEM_ORDER.filter(k=>save.owned[k]&&ITEMS[k].kind!=="equip");
@@ -573,9 +1320,33 @@ function drawGacha(){
     if(roll<.05){rarity="UR";plus=3;bonusCoins=120}
     else if(roll<.25){rarity="SR";plus=2;bonusCoins=40}
     const picked=choice(owned);save.power[picked]+=plus;save.coins+=bonusCoins;
+    el.capsule.className=`capsule ${rarity==="UR"?"rarity-ur":rarity==="SR"?"rarity-sr":"rarity-r"}`;
+    if(rarity==="UR") battleShakeGacha(12);
     el.capsule.textContent=ITEMS[picked].icon;
     const stars=rarity==="UR"?"★★★★":rarity==="SR"?"★★★":"★★";
     el.gachaLog.textContent=`${stars} ${rarity}！\n${ITEMS[picked].label} 強化 +${plus} を獲得。\n現在 Lv.${save.power[picked]}${bonusCoins?`\nボーナスコイン +${bonusCoins}`:""}`;
+  }
+  writeSave();renderGacha();renderMenu();
+}
+
+
+function drawLegendGacha(){
+  if(save.tickets<5){showToast("伝説ガチャにはチケット5枚が必要です");return}
+  save.tickets-=5;
+  const notOwned=LEGENDARY_KEYS.filter(k=>!save.owned[k]);
+  const picked=notOwned.length?choice(notOwned):choice(LEGENDARY_KEYS);
+  const item=ITEMS[picked];
+  el.capsule.className="capsule rarity-ur";
+  el.capsule.textContent=item.icon;
+  battleShakeGacha(16);
+  if(!save.owned[picked]){
+    save.owned[picked]=true;
+    if(item.kind!=="equip"&&save.deck.length<MAX_DECK)save.deck.push(picked);
+    el.gachaLog.textContent=`★★★★★ LEGEND！\n${item.label} を獲得！\n${item.role}${item.kind!=="equip"?"\nデッキにも自動で入りました。":"\n装備画面で装備できます。"}`;
+  }else{
+    save.power[picked]=(save.power[picked]||0)+4;
+    save.coins+=300;
+    el.gachaLog.textContent=`★★★★★ LEGEND強化！\n${item.label} 強化 +4\n現在 Lv.${save.power[picked]}\nボーナスコイン +300`;
   }
   writeSave();renderGacha();renderMenu();
 }
@@ -599,20 +1370,61 @@ function rewardForClear(id,firstClear){
 }
 
 function getStageConfig(id){
-  if(id===0)return{id,name:"TUTORIAL",playerHp:640,enemyHp:360,enemyMul:.74,enemySpawnBase:3.55,enemyLimit:4,enemyTankChance:0,enemyShieldChance:0,enemyRocketChance:0,enemyHeavyChance:0,enemySkill:false,obstacles:false,boss:false,bossType:null,startGauge:0,gaugeMax:12,note:"3D戦場チュートリアル\nクリアでチケット"};
+  if(id===-1)return{id:-1,name:"SURVIVAL",survival:true,survivalLevel:1,playerHp:Math.round(960+(save.upgrades.baseHp||0)*70),enemyHp:999999,enemyMul:.82,enemySpawnBase:2.35,enemyLimit:7,enemyTankChance:0,enemyShieldChance:.10,enemyRocketChance:0,enemyHeavyChance:0,enemySkill:false,obstacles:true,boss:false,bossType:null,startGauge:Math.min(8,save.upgrades.startGauge||0),gaugeMax:MAX_GAUGE+(hasEquip("gaugeCore")?4:0)+(hasEquip("overdriveCore")?2:0),note:"サバイバル\n敵は時間で強化"};
+  if(id===0)return{id,name:"TUTORIAL",playerHp:640+(save.upgrades.baseHp||0)*60,enemyHp:360,enemyMul:.74,enemySpawnBase:3.55,enemyLimit:4,enemyTankChance:0,enemyShieldChance:0,enemyRocketChance:0,enemyHeavyChance:0,enemySkill:false,obstacles:false,boss:false,bossType:null,startGauge:Math.min(6,save.upgrades.startGauge||0),gaugeMax:12,note:"3D戦場チュートリアル\nクリアでチケット"};
   const boss=isBossLevel(id);
   return{
-    id,name:boss?`BOSS LEVEL ${id}`:`LEVEL ${id}`,playerHp:Math.round(900+id*7),
-    enemyHp:Math.round(540+id*45+Math.pow(id,1.28)*2.6+(boss?id*28:0)),
+    id,name:boss?`BOSS LEVEL ${id}`:`LEVEL ${id}`,playerHp:Math.round(900+id*7+(save.upgrades.baseHp||0)*60),
+    enemyHp:Math.round((540+id*45+Math.pow(id,1.28)*2.6+(boss?id*28:0))*(id>=40?.88:1)),
     enemyMul:.80+id*.018+(boss?.05:0),enemySpawnBase:Math.max(1.0,3.15-id*.034-(boss?.12:0)),
     enemyLimit:6+Math.floor(id/8)+(boss?2:0),enemyTankChance:id>=6?Math.min(.28,(id-5)*.012):0,
     enemyShieldChance:id>=4?Math.min(.22,(id-3)*.010):0,enemyRocketChance:id>=12?Math.min(.22,(id-11)*.008):0,
     enemyHeavyChance:id>=35?Math.min(.16,(id-34)*.008):0,enemySkill:id>=31,obstacles:id>=21,boss,bossType:boss?bossType(id):null,
-    startGauge:0,gaugeMax:MAX_GAUGE+(hasEquip("gaugeCore")?4:0),
+    startGauge:Math.min(8,save.upgrades.startGauge||0),gaugeMax:MAX_GAUGE+(hasEquip("gaugeCore")?4:0)+(hasEquip("overdriveCore")?2:0),
     note:`${stageNote(id)}${boss?"\nボスステージ":""}${id>=21?"\n3D遮蔽物あり":""}${id>=31?"\n敵スキルあり":""}`
   };
 }
 function bossType(id){if(id===5)return"tank";if(id===10)return"heavy";if(id===20)return"fortress";if(id===30)return"missile";if(id===40)return"giant";if(id===50)return"final";return id<25?"heavy":"giant"}
+
+function stageTheme(id){
+  if(id<=10)return {name:"grass",ground1:"#203b2b",ground2:"#10251c",speck:"rgba(139,202,108,.22)",sky:"rgba(90,170,210,.22)",far:"#132a32",accent:"#6ea86d"};
+  if(id<=20)return {name:"wasteland",ground1:"#3b3024",ground2:"#1f1a15",speck:"rgba(230,190,126,.20)",sky:"rgba(190,146,90,.18)",far:"#2e241b",accent:"#c69a5e"};
+  if(id<=30)return {name:"city",ground1:"#303844",ground2:"#171e26",speck:"rgba(190,205,220,.16)",sky:"rgba(120,145,170,.18)",far:"#1b2430",accent:"#93a0aa"};
+  if(id<=40)return {name:"night",ground1:"#10182c",ground2:"#070b16",speck:"rgba(120,170,255,.20)",sky:"rgba(90,120,255,.16)",far:"#071126",accent:"#6b86ff"};
+  return {name:"fortress",ground1:"#2c1017",ground2:"#0b0509",speck:"rgba(255,105,120,.16)",sky:"rgba(255,60,95,.12)",far:"#200812",accent:"#ff6b78"};
+}
+function createTerrainMarks(config){
+  const theme=stageTheme(config.id);
+  const arr=[];
+  const count=config.id===0?18:34+Math.min(32,config.id);
+  for(let i=0;i<count;i++){
+    const type=i%7===0?"rock":i%5===0?"grass":i%4===0?"mud":"speck";
+    arr.push({type,x:rand(120,880),z:rand(-.96,.96),r:rand(4,18),w:rand(14,48),a:rand(.08,.24),color:theme.speck});
+  }
+  if(config.id>=11){for(let i=0;i<16;i++)arr.push({type:"tire",x:rand(180,840),z:rand(-.85,.85),r:rand(8,18),w:rand(38,90),a:.13,color:"rgba(40,28,18,.35)"});}
+  if(config.id>=21){for(let i=0;i<12;i++)arr.push({type:"rubble",x:rand(180,860),z:rand(-.9,.9),r:rand(6,16),w:rand(24,60),a:.18,color:"rgba(150,150,150,.22)"});}
+  return arr;
+}
+function addTrack(u){
+  if(!battle)return;
+  const armored=["tank","heavy","plasmaTank","fortress","missile","giant","final"].includes(u.type);
+  battle.tracks.push({x:u.x-rand(3,12)*u.dir,z:u.z+rand(-.03,.03),type:armored?"tire":"foot",life:armored?10:5,max:armored?10:5,side:u.side});
+  if(battle.tracks.length>120)battle.tracks.splice(0,battle.tracks.length-120);
+}
+function addMuzzleFlash(u){
+  if(!battle)return;
+  const stat=getUnit(u.type,u.side,battle.config);
+  const x=u.x+(u.aimDir||u.dir)*(stat.radius+18);
+  const color=u.side==="player"?"#fff4a8":"#ffb0a8";
+  battle.flashes.push({x,z:u.z,h:42,life:.12,max:.12,color,size:u.type==="rocket"?20:u.type==="tank"||u.type==="heavy"?18:11});
+  particles(x,u.z,34,color,u.type==="rocket"?9:5);
+}
+function addExplosion(x,z,power=32,color="#ffb35c"){
+  addCrater(x,z,Math.max(14,power));
+  particles(x,z,34,color,Math.floor(power*.55));
+  particles(x,z,24,"#ffd76a",Math.floor(power*.25));
+  particles(x,z,42,"#9aa3ad",Math.floor(power*.35));
+}
 
 function getUnit(type,side,config){
   if(!ITEMS[type]){
@@ -622,11 +1434,12 @@ function getUnit(type,side,config){
   }
   const b=ITEMS[type],u=Object.assign({},b);u.color=side==="player"?b.color:b.enemyColor;
   if(side==="player"){
-    const p=save.power[type]||0;
+    const p=(save.power[type]||0)+(type==="rifle"?(save.upgrades.rifle||0):type==="tank"?(save.upgrades.tank||0):0);
     u.hp+=(p*(type==="heavy"?24:type==="tank"?18:type==="shield"?12:type==="rocket"?7:6));
     u.damage=(u.damage||0)+(p*(type==="railgun"?5.5:type==="heavy"?4.2:type==="tank"?3.2:type==="rocket"?3.4:1.35));
     u.hit=Math.min(.98,(u.hit||1)+p*.006+(hasEquip("scope")?.08:0));
     if(hasEquip("armor"))u.hp*=1.10;
+    if(hasEquip("nanoArmor"))u.hp*=1.18;
     if(u.heal)u.heal+=p*2;
   }else{
     const m=config.enemyMul||1;u.hp*=m;u.damage=(u.damage||0)*m;u.hit=Math.min(.95,(u.hit||1)+Math.max(0,config.id-1)*.002);
@@ -636,31 +1449,34 @@ function getUnit(type,side,config){
 }
 
 function makeObstacle(kind,x,z){
-  const data={sandbag:{hp:130,maxHp:130,cover:.48,color:"#b38b5a"},steel:{hp:230,maxHp:230,cover:.70,color:"#8793a0"},burning:{hp:170,maxHp:170,cover:.36,color:"#5b5f64",burn:true},wall:{hp:270,maxHp:270,cover:.82,color:"#6fd7ff",playerMade:true},bunker:{hp:320,maxHp:320,cover:.78,color:"#8cc6ff",playerMade:true,gun:true,cd:.8}}[kind];
+  const data={sandbag:{hp:130,maxHp:130,cover:.48,color:"#b38b5a"},steel:{hp:230,maxHp:230,cover:.70,color:"#8793a0"},burning:{hp:170,maxHp:170,cover:.36,color:"#5b5f64",burn:true},wall:{hp:270,maxHp:270,cover:.82,color:"#6fd7ff",playerMade:true},bunker:{hp:320,maxHp:320,cover:.78,color:"#8cc6ff",playerMade:true,gun:true,cd:.8},silo:{hp:360,maxHp:360,cover:.72,color:"#ffd76a",playerMade:true,missile:true,cd:.4}}[kind];
   return Object.assign({kind,x,z,flash:0},data);
 }
 function createObstacles(config){
   const arr=[];if(!config.obstacles)return arr;
-  const count=config.id>=31?5:3;
-  for(let i=0;i<count;i++){const x=310+i*95+rand(-24,24),z=rand(-.62,.62);const kind=i===1&&config.id>=26?"steel":i===3&&config.id>=31?"burning":"sandbag";arr.push(makeObstacle(kind,x,z))}
+  const count=config.survival?4:(config.id>=31?5:3);
+  for(let i=0;i<count;i++){const x=310+i*95+rand(-24,24),z=rand(-.62,.62);const kind=config.survival?(i===1?"steel":i===3?"burning":"sandbag"):(i===1&&config.id>=26?"steel":i===3&&config.id>=31?"burning":"sandbag");arr.push(makeObstacle(kind,x,z))}
   return arr;
 }
 
 function startStage(id){
   const config=getStageConfig(id);
   battle={config,running:true,paused:false,ended:false,win:false,time:0,gauge:config.startGauge,gaugeTimer:0,playerHp:config.playerHp,enemyHp:config.enemyHp,
-    units:[],projectiles:[],particles:[],floatTexts:[],craters:[],obstacles:createObstacles(config),mines:[],enemySpawnTimer:id===0?2.8:2.0,
+    units:[],projectiles:[],particles:[],floatTexts:[],craters:[],tracks:[],flashes:[],terrain:createTerrainMarks(config),obstacles:createObstacles(config),mines:[],enemySpawnTimer:id===0?2.8:2.0,
     enemySkillTimer:config.enemySkill?rand(12,18):999,bossSpawned:false,baseSmokeTimer:0,rallyTimer:0,enemySmokeTimer:0,shakes:0,
-    stats:{kills:0,spent:0,used:0,maxCombo:0,combo:0,comboTimer:0}};
-  el.pauseBtn.textContent="一時停止";buildActionButtons();showScreen("battle");
+    stats:{kills:0,spent:0,used:0,maxCombo:0,combo:0,comboTimer:0,usedTypes:{},airKills:0},warningTimer:0,bossUnit:null,cameraFocus:null,cameraZoom:1,survivalWave:1,survivalBestShown:false};
+  el.pauseBtn.textContent="一時停止";el.pauseMenu.classList.add("hidden");buildActionButtons();showScreen("battle");
 }
 function buildActionButtons(){
   el.actionButtons.innerHTML="";if(!battle)return;
   const deck=save.deck.filter(k=>ITEMS[k]&&save.owned[k]&&ITEMS[k].kind!=="equip").slice(0,MAX_DECK);
   for(const key of deck){
-    const item=ITEMS[key],btn=document.createElement("button");btn.dataset.key=key;
-    btn.innerHTML=`${item.label}<span class="cost">${item.cost}G</span><span class="desc">${item.role}</span>`;
-    btn.addEventListener("click",()=>useDeckItem(key));el.actionButtons.appendChild(btn);
+    const item=ITEMS[key],btn=document.createElement("button");
+    btn.dataset.key=key;
+    btn.classList.add("kind-"+actionKind(key,item));
+    btn.innerHTML=actionButtonHTML(key,item,item.role);
+    btn.addEventListener("click",()=>useDeckItem(key));
+    el.actionButtons.appendChild(btn);
   }
 }
 function useDeckItem(key){
@@ -668,16 +1484,46 @@ function useDeckItem(key){
   if(!save.owned[key]||!save.deck.includes(key))return;
   const item=ITEMS[key];if(battle.gauge<item.cost){showToast("ゲージ不足です");return}
   battle.gauge-=item.cost;battle.stats.spent+=item.cost;battle.stats.used+=1;
-  if(item.kind==="unit")spawnUnit(key,"player");
-  else if(key==="air")skillAir();else if(key==="wall")skillWall();else if(key==="repair")skillRepair();else if(key==="rush")skillRush();else if(key==="mine")skillMine();else if(key==="smoke")skillSmoke();else if(key==="artillery")skillArtillery();else if(key==="drone")skillDrone();else if(key==="bunker")skillBunker();
+  if(item.kind==="unit"){battle.stats.usedTypes[key]=(battle.stats.usedTypes[key]||0)+1;spawnUnit(key,"player");}
+  else if(key==="air")skillAir();else if(key==="wall")skillWall();else if(key==="repair")skillRepair();else if(key==="rush")skillRush();else if(key==="mine")skillMine();else if(key==="smoke")skillSmoke();else if(key==="artillery")skillArtillery();else if(key==="drone")skillDrone();else if(key==="bunker")skillBunker();else if(key==="laserDrone")skillLaserDrone();else if(key==="orbitalLaser")skillOrbitalLaser();else if(key==="missileSilo")skillMissileSilo();
   updateBattleUI();
 }
 function spawnUnit(type,side,xOverride){
   const stat=getUnit(type,side,battle.config);const x=xOverride??(side==="player"?PLAYER_BASE+35:ENEMY_BASE-35),z=rand(-.55,.55);
-  battle.units.push({type,side,x,z,dir:side==="player"?1:-1,hp:stat.hp,maxHp:stat.hp,cd:rand(.1,.45),flash:0,slow:0,recoil:0});
+  battle.units.push({type,side,x,z,dir:side==="player"?1:-1,hp:stat.hp,maxHp:stat.hp,cd:rand(.1,.45),flash:0,slow:0,recoil:0,trackCd:rand(.05,.25),walk:rand(0,Math.PI*2),aimDir:side==="player"?1:-1});
   particles(x,z,8,stat.color,10);
 }
-function spawnBoss(){if(battle.bossSpawned||!battle.config.boss)return;battle.bossSpawned=true;const type=battle.config.bossType||"heavy";spawnUnit(type,"enemy",ENEMY_BASE-92);addText(ENEMY_BASE-92,0,80,"BOSS","#ffd76a");battle.shakes=9}
+function spawnBoss(){if(battle.bossSpawned||!battle.config.boss)return;battle.bossSpawned=true;const type=battle.config.bossType||"heavy";spawnUnit(type,"enemy",ENEMY_BASE-92);battle.bossUnit=battle.units[battle.units.length-1];battle.warningTimer=2.6;battle.cameraFocus={x:ENEMY_BASE-92,z:0,time:2.0};addText(ENEMY_BASE-92,0,110,"WARNING", "#ff6b78");addText(ENEMY_BASE-92,0,80,"BOSS", "#ffd76a");battle.shakes=14}
+
+function survivalRank(score){
+  if(score>=14000)return "SSS / TOP 1%";
+  if(score>=10000)return "SS / TOP 3%";
+  if(score>=7200)return "S / TOP 8%";
+  if(score>=4800)return "A / TOP 20%";
+  if(score>=3000)return "B / TOP 45%";
+  if(score>=1600)return "C / TOP 70%";
+  return "D / ROOKIE";
+}
+function updateSurvivalDifficulty(){
+  if(!battle||!battle.config.survival)return;
+  const c=battle.config;
+  const wave=1+Math.floor(battle.time/20);
+  battle.survivalWave=wave;
+  c.survivalLevel=wave;
+  c.enemyMul=.78+wave*.075;
+  c.enemySpawnBase=Math.max(.62,2.35-wave*.045);
+  c.enemyLimit=7+Math.floor(wave/2);
+  c.enemyShieldChance=Math.min(.26,.08+wave*.012);
+  c.enemyTankChance=wave>=3?Math.min(.33,(wave-2)*.018):0;
+  c.enemyRocketChance=wave>=5?Math.min(.28,(wave-4)*.014):0;
+  c.enemyHeavyChance=wave>=9?Math.min(.22,(wave-8)*.012):0;
+  c.enemySkill=wave>=7;
+  if(wave>1 && battle.time%20<.04){
+    addText(FIELD_W/2,0,120,`WAVE ${wave}`,"#ffd76a");
+    battle.shakes=Math.max(battle.shakes,5);
+  }
+}
+
 function chooseEnemyType(){
   const c=battle.config;if(c.id===0)return"rifle";const r=Math.random();let acc=0;
   acc+=c.enemyHeavyChance;if(r<acc)return"heavy";acc+=c.enemyRocketChance;if(r<acc)return"rocket";acc+=c.enemyTankChance;if(r<acc)return"tank";acc+=c.enemyShieldChance;if(r<acc)return"shield";return"rifle";
@@ -689,7 +1535,7 @@ function enemyAI(dt){
   if(c.enemySkill){battle.enemySkillTimer-=dt;if(battle.enemySkillTimer<=0){enemySkill();battle.enemySkillTimer=rand(15,23)}}
 }
 function enemySkill(){
-  if(Math.random()<.5){battle.shakes=8;for(const u of battle.units){if(u.side==="player"){u.hp-=35+battle.config.id*1.1;u.flash=.18;particles(u.x,u.z,26,"#ff8a60",12)}}battle.playerHp=Math.max(0,battle.playerHp-45);addText(FIELD_W/2,0,95,"敵空爆","#ff8a60")}
+  if(Math.random()<.5){battle.shakes=8;for(const u of battle.units){if(u.side==="player"){u.hp-=35+(battle.config.survivalLevel||battle.config.id)*1.1;u.flash=.18;particles(u.x,u.z,26,"#ff8a60",12)}}battle.playerHp=Math.max(0,battle.playerHp-45);addText(FIELD_W/2,0,95,"敵空爆","#ff8a60")}
   else{for(const u of battle.units)if(u.side==="enemy")u.slow=-4;addText(FIELD_W/2,0,95,"敵突撃","#ff6b78")}
 }
 function skillAir(){battle.shakes=12;addCrater(ENEMY_BASE-90,0,46);for(const u of battle.units)if(u.side==="enemy"){u.hp-=82;u.flash=.2;particles(u.x,u.z,28,"#ffd76a",16)}battle.enemyHp=Math.max(0,battle.enemyHp-70);addText(FIELD_W/2,0,100,"空爆！","#ffd76a")}
@@ -701,6 +1547,9 @@ function skillSmoke(){battle.enemySmokeTimer=8;addText(FIELD_W/2,0,90,"煙幕","
 function skillArtillery(){battle.shakes=10;for(let i=0;i<4;i++){const x=540+i*70+rand(-25,25),z=rand(-.7,.7);setTimeout(()=>{if(!battle||battle.ended)return;addCrater(x,z,38);particles(x,z,34,"#ffb35c",25);for(const u of battle.units)if(u.side==="enemy"){const d=Math.hypot((u.x-x)/1.6,(u.z-z)*120);if(d<110){u.hp-=95*(1-d/120);u.flash=.2}}battle.enemyHp=Math.max(0,battle.enemyHp-25);battle.shakes=Math.max(battle.shakes,8)},i*180)}addText(FIELD_W/2,0,100,"榴弾砲！","#ffb35c")}
 function skillDrone(){for(let i=0;i<4;i++){setTimeout(()=>{if(!battle||battle.ended)return;const target=choice(battle.units.filter(u=>u.side==="enemy"))||{x:ENEMY_BASE-60,z:rand(-.5,.5)};addCrater(target.x,target.z,34);particles(target.x,target.z,46,"#b7e8ff",22);for(const u of battle.units)if(u.side==="enemy"){const d=Math.hypot(u.x-target.x,(u.z-target.z)*150);if(d<82){u.hp-=42*(1-d/92);u.flash=.16}}battle.enemyHp=Math.max(0,battle.enemyHp-8);battle.shakes=Math.max(battle.shakes,4)},i*260)}addText(FIELD_W/2,0,110,"ドローン爆撃","#b7e8ff")}
 function skillBunker(){const x=245,z=rand(-.45,.45);battle.obstacles.push(makeObstacle("bunker",x,z));addText(x,z,70,"バンカー","#8cc6ff");particles(x,z,18,"#8cc6ff",22)}
+function skillLaserDrone(){addText(FIELD_W/2,0,115,"レーザードローン","#9de7ff");for(let i=0;i<8;i++){setTimeout(()=>{if(!battle||battle.ended)return;const list=battle.units.filter(u=>u.side==="enemy");const target=list.length?choice(list):null;if(target){particles(target.x,target.z,58,"#9de7ff",18);target.hp-=72;target.flash=.22}else{particles(ENEMY_BASE-50,rand(-.5,.5),58,"#9de7ff",18);battle.enemyHp=Math.max(0,battle.enemyHp-16)}battle.enemyHp=Math.max(0,battle.enemyHp-8);battle.shakes=Math.max(battle.shakes,4)},i*160)}}
+function skillOrbitalLaser(){battle.shakes=16;addText(FIELD_W/2,0,130,"軌道レーザー","#fff2b8");const center=FIELD_W*.55;for(const u of battle.units){if(u.side==="enemy"){const d=Math.abs(u.x-center)+Math.abs(u.z)*80;if(d<320){u.hp-=180*(1-d/360);u.flash=.28;particles(u.x,u.z,55,"#fff2b8",22)}}}battle.enemyHp=Math.max(0,battle.enemyHp-150);for(let i=0;i<40;i++)particles(center+rand(-120,120),rand(-.75,.75),rand(30,95),"#fff2b8",1)}
+function skillMissileSilo(){const x=230,z=rand(-.42,.42);battle.obstacles.push(makeObstacle("silo",x,z));addText(x,z,80,"ミサイルサイロ","#ffd76a");particles(x,z,20,"#ffd76a",26)}
 
 function obstacleBetween(x1,x2,side){
   const min=Math.min(x1,x2),max=Math.max(x1,x2);const list=battle.obstacles.filter(o=>o.hp>0&&o.x>min&&o.x<max);
@@ -722,21 +1571,24 @@ function findTarget(u){
 }
 function shoot(u,target){
   const stat=getUnit(u.type,u.side,battle.config);
+  u.aimDir = target && target.x !== undefined ? (target.x>=u.x?1:-1) : u.dir;
+  addMuzzleFlash(u);
   if(target.heal){target.ref.hp=Math.min(target.ref.maxHp,target.ref.hp+stat.heal);particles(target.ref.x,target.ref.z,22,"#baffda",8);u.cd=stat.cooldown;return}
   let actual=target;const blocker=obstacleBetween(u.x,target.x,u.side);if(blocker)actual={obstacle:true,ref:blocker,x:blocker.x,z:blocker.z,type:"obstacle"};
   let hitChance=stat.hit||1;if(u.side==="enemy"&&battle.enemySmokeTimer>0)hitChance*=.58;
   const hit=Math.random()<hitChance||actual.obstacle||actual.base;
   const missX=hit?0:rand(38,84)*(Math.random()<.5?-1:1),missZ=hit?0:rand(-.25,.25);
-  battle.projectiles.push({x:u.x,z:u.z,h:32,tx:actual.x+missX,tz:actual.z+missZ,th:14,side:u.side,sourceType:u.type,target:hit?actual:null,damage:stat.damage||0,splash:stat.splash||0,antiArmor:stat.antiArmor||1,pierce:stat.pierce||false,speed:u.type==="rocket"?250:(["tank","heavy","railgun"].includes(u.type)?330:400),size:u.type==="rocket"?7:(["tank","heavy","railgun"].includes(u.type)?6:4),color:u.side==="player"?"#8eeeff":"#ff8c94",miss:!hit});
+  battle.projectiles.push({x:u.x,z:u.z,h:32,tx:actual.x+missX,tz:actual.z+missZ,th:14,side:u.side,sourceType:u.type,target:hit?actual:null,damage:stat.damage||0,splash:stat.splash||0,antiArmor:stat.antiArmor||1,pierce:stat.pierce||false,speed:u.type==="rocket"?250:(["tank","heavy","plasmaTank","railgun"].includes(u.type)?330:400),size:u.type==="rocket"?7:(["tank","heavy","plasmaTank","railgun"].includes(u.type)?6:4),color:u.side==="player"?"#8eeeff":"#ff8c94",miss:!hit});
   u.recoil=.14;
 }
 function damageTarget(target,damage,p){
   if(!target)return;
-  if(target.obstacle){const o=target.ref;o.hp-=damage*(["tank","rocket","heavy","railgun"].includes(p.sourceType)?1:.55);o.flash=.16;particles(o.x,o.z,20,o.color,12);return}
+  if(target.obstacle){const o=target.ref;o.hp-=damage*(["tank","rocket","heavy","plasmaTank","railgun"].includes(p.sourceType)?1:.55);o.flash=.16;particles(o.x,o.z,20,o.color,12);return}
   if(target.base){if(target.side==="enemy")battle.enemyHp=Math.max(0,battle.enemyHp-damage);else battle.playerHp=Math.max(0,battle.playerHp-damage);battle.shakes=Math.max(battle.shakes,5);return}
   let finalDamage=damage;
-  if(p.sourceType==="rocket"&&["tank","heavy","fortress","missile","giant","final"].includes(target.type))finalDamage*=p.antiArmor;
+  if(p.sourceType==="rocket"&&["tank","heavy","plasmaTank","fortress","missile","giant","final"].includes(target.type))finalDamage*=p.antiArmor;
   if(target.type==="shield"&&p.sourceType!=="rocket")finalDamage*=.72;
+  if(p.sourceType==="empLauncher"){target.slow=Math.max(target.slow||0,2.2);particles(target.x,target.z,25,"#caa7ff",10)}
   target.hp-=finalDamage;target.flash=.12;
 }
 function splashDamage(p,amount){
@@ -754,11 +1606,11 @@ function updateUnits(dt){
     if(u.slow>0)u.slow=Math.max(0,u.slow-dt);if(u.slow<0)u.slow=Math.min(0,u.slow+dt);
     const target=findTarget(u);
     if(target){if(u.cd<=0){shoot(u,target);u.cd=stat.cooldown}}
-    else{let speed=stat.speed||20;if(u.side==="player"&&battle.rallyTimer>0)speed*=1.55;if(u.slow>0)speed*=.45;if(u.slow<0)speed*=1.45;u.x+=u.dir*speed*dt;u.z+=(0-u.z)*dt*.38}
+    else{let speed=stat.speed||20;if(u.side==="player"&&battle.rallyTimer>0)speed*=1.55;if(u.slow>0)speed*=.45;if(u.slow<0)speed*=1.45;u.x+=u.dir*speed*dt;u.z+=(0-u.z)*dt*.38;u.walk=(u.walk||0)+dt*speed*.16;u.trackCd=(u.trackCd||0)-dt;if(u.trackCd<=0){addTrack(u);u.trackCd=["tank","heavy","fortress","missile","giant","final"].includes(u.type)?.18:.32;}}
     u.x=clamp(u.x,PLAYER_BASE,ENEMY_BASE);u.z=clamp(u.z,-.9,.9);
   }
   for(const o of battle.obstacles){
-    if(o.gun&&o.hp>0){o.cd-=dt;if(o.cd<=0){o.cd=1.15;const t=battle.units.filter(u=>u.side==="enemy").sort((a,b)=>Math.abs(a.x-o.x)-Math.abs(b.x-o.x))[0];if(t&&Math.abs(t.x-o.x)<210){battle.projectiles.push({x:o.x,z:o.z,h:40,tx:t.x,tz:t.z,th:15,side:"player",sourceType:"bunker",target:t,damage:20,splash:0,antiArmor:1,speed:390,size:4,color:"#8cc6ff",miss:false})}}}
+    if((o.gun||o.missile)&&o.hp>0){o.cd-=dt;if(o.cd<=0){o.cd=o.missile?1.25:1.15;const t=battle.units.filter(u=>u.side==="enemy").sort((a,b)=>Math.abs(a.x-o.x)-Math.abs(b.x-o.x))[0];if(t&&Math.abs(t.x-o.x)<(o.missile?360:210)){battle.projectiles.push({x:o.x,z:o.z,h:o.missile?68:40,tx:t.x,tz:t.z,th:15,side:"player",sourceType:o.missile?"missileSilo":"bunker",target:t,damage:o.missile?76:20,splash:o.missile?42:0,antiArmor:1.2,speed:o.missile?270:390,size:o.missile?7:4,color:o.missile?"#ffd76a":"#8cc6ff",miss:false})}}}
     if(o.burn&&o.hp>0){for(const u of battle.units)if(Math.abs(u.x-o.x)<46&&Math.abs(u.z-o.z)<.25){u.hp-=7*dt;if(Math.random()<dt*4)particles(u.x,u.z,20,"#ff8a3d",2)}}
     o.flash=Math.max(0,o.flash-dt);
   }
@@ -771,17 +1623,23 @@ function updateUnits(dt){
 function updateProjectiles(dt){
   for(const p of battle.projectiles){
     const dx=p.tx-p.x,dz=p.tz-p.z,d=Math.hypot(dx,dz*260)||1,move=p.speed*dt,t=clamp(move/d,0,1);
-    if(t>=1){p.x=p.tx;p.z=p.tz;p.h=p.th;p.hit=true}else{p.x+=dx*t;p.z+=dz*t;const prog=1-Math.hypot(p.tx-p.x,(p.tz-p.z)*260)/d;p.h=18+Math.sin(prog*Math.PI)*(p.sourceType==="rocket"?58:22)}
+    if(t>=1){p.x=p.tx;p.z=p.tz;p.h=p.th;p.hit=true}else{p.x+=dx*t;p.z+=dz*t;const prog=1-Math.hypot(p.tx-p.x,(p.tz-p.z)*260)/d;p.h=18+Math.sin(prog*Math.PI)*(p.sourceType==="rocket"?58:22)} if(p.sourceType==="rocket"&&Math.random()<.45)particles(p.x,p.z,p.h,"#dbe4e8",1);
   }
   for(const p of battle.projectiles.filter(p=>p.hit)){
     if(p.miss){addCrater(p.x,p.z,12);particles(p.x,p.z,16,"#c8b28a",9);if(p.splash)splashDamage(p,p.damage*.22)}
-    else{damageTarget(p.target,p.damage,p);if(p.pierce)railgunPierce(p);if(p.splash)splashDamage(p,p.damage*.55);if(p.splash||["tank","heavy","railgun","rocket"].includes(p.sourceType))addCrater(p.x,p.z,p.splash?34:18);particles(p.x,p.z,p.splash?32:18,p.sourceType==="rocket"?"#ffd76a":p.color,p.splash?22:8);if(p.splash||["tank","heavy","railgun"].includes(p.sourceType))battle.shakes=Math.max(battle.shakes,4)}
+    else{damageTarget(p.target,p.damage,p);if(p.pierce)railgunPierce(p);if(p.splash)splashDamage(p,p.damage*.55);if(p.splash||["tank","heavy","railgun","rocket","bunker"].includes(p.sourceType))addExplosion(p.x,p.z,p.splash?34:18,p.sourceType==="rocket"?"#ffd76a":p.color);else particles(p.x,p.z,18,p.color,8);if(p.splash||["tank","heavy","plasmaTank","railgun"].includes(p.sourceType))battle.shakes=Math.max(battle.shakes,4)}
   }
   battle.projectiles=battle.projectiles.filter(p=>!p.hit);
 }
 function particles(x,z,h,color,count){if(!battle)return;for(let i=0;i<count;i++)battle.particles.push({x:x+rand(-8,8),z:z+rand(-.04,.04),h:h+rand(-4,4),vx:rand(-38,38),vz:rand(-.20,.20),vh:rand(8,70),life:rand(.28,.85),max:.85,color,r:rand(2,5)})}
 function addText(x,z,h,text,color){if(!battle)return;battle.floatTexts.push({x,z,h,text,color,life:1.2,max:1.2,vh:36})}
 function addCrater(x,z,r=28){if(!battle)return;battle.craters.push({x,z,r,life:999});if(battle.craters.length>34)battle.craters.shift()}
+function updateMarks(dt){
+  if(!battle)return;
+  if(battle.flashes){for(const f of battle.flashes)f.life-=dt;battle.flashes=battle.flashes.filter(f=>f.life>0);}
+  if(battle.tracks){for(const t of battle.tracks)t.life-=dt*.22;battle.tracks=battle.tracks.filter(t=>t.life>0);}
+  if(battle.cameraFocus){battle.cameraFocus.time-=dt;if(battle.cameraFocus.time<=0)battle.cameraFocus=null;}
+}
 function updateParticles(dt){
   for(const p of battle.particles){p.life-=dt;p.x+=p.vx*dt;p.z+=p.vz*dt;p.h+=p.vh*dt;p.vx*=.95;p.vz*=.95;p.vh-=95*dt;if(p.h<0)p.h=0}
   battle.particles=battle.particles.filter(p=>p.life>0);
@@ -789,7 +1647,7 @@ function updateParticles(dt){
   battle.floatTexts=battle.floatTexts.filter(f=>f.life>0);
 }
 function updateGauge(dt){
-  battle.gaugeTimer+=dt;const gain=hasEquip("gaugeCore")?1.08:1;
+  battle.gaugeTimer+=dt;const gain=(hasEquip("gaugeCore")?1.08:1)*(hasEquip("overdriveCore")?1.12:1);
   while(battle.gaugeTimer>=1/gain){battle.gaugeTimer-=1/gain;battle.gauge=Math.min(battle.config.gaugeMax,battle.gauge+1)}
 }
 function updateBaseSmoke(dt){
@@ -797,73 +1655,180 @@ function updateBaseSmoke(dt){
 }
 function updateBattle(dt){
   if(toastTimer>0){toastTimer-=dt;if(toastTimer<=0)el.toast.classList.add("hidden")}
-  if(!battle||screen!=="battle"||!battle.running||battle.paused||battle.ended)return;
-  battle.time+=dt;battle.shakes=Math.max(0,battle.shakes-dt*18);battle.rallyTimer=Math.max(0,battle.rallyTimer-dt);battle.enemySmokeTimer=Math.max(0,battle.enemySmokeTimer-dt);
-  updateGauge(dt);enemyAI(dt);updateUnits(dt);updateProjectiles(dt);updateParticles(dt);updateBaseSmoke(dt);
-  if(battle.enemyHp<=0)finishBattle(true);if(battle.playerHp<=0)finishBattle(false);
+  if(!battle)return;
+  if(screen==="result"&&battle.ended){
+    battle.shakes=Math.max(0,battle.shakes-dt*18);updateParticles(dt);updateMarks(dt);updateBaseSmoke(dt);return;
+  }
+  if(screen!=="battle"||!battle.running||battle.paused||battle.ended)return;
+  battle.time+=dt;battle.shakes=Math.max(0,battle.shakes-dt*18);battle.rallyTimer=Math.max(0,battle.rallyTimer-dt);battle.enemySmokeTimer=Math.max(0,battle.enemySmokeTimer-dt);battle.warningTimer=Math.max(0,(battle.warningTimer||0)-dt);
+  updateSurvivalDifficulty();
+  updateGauge(dt);enemyAI(dt);updateUnits(dt);updateProjectiles(dt);updateParticles(dt);updateMarks(dt);updateBaseSmoke(dt);
+  if(!battle.config.survival&&battle.enemyHp<=0)finishBattle(true);if(battle.playerHp<=0)finishBattle(false);
   updateBattleUI();
+}
+function getMissionResults(win){
+  if(!battle)return {text:"",bonus:0};
+  const c=battle.config,hpRate=battle.playerHp/c.playerHp;
+  const list=[];
+  if(win&&battle.time<=60)list.push("60秒以内クリア");
+  if(win&&hpRate>=.70)list.push("自軍HP70%以上");
+  if(win&&!(battle.stats.usedTypes.tank||battle.stats.usedTypes.heavy))list.push("重装甲なし勝利");
+  if(win&&c.boss&&battle.time<=75)list.push("ボス高速撃破");
+  const bonus=list.length*75;
+  return {text:list.length?`ミッション達成：${list.join(" / ")}\nボーナス +${bonus} COIN`:"ミッション達成なし",bonus};
 }
 function calculateScore(win){
   const c=battle.config, hpRate=clamp(battle.playerHp/c.playerHp,0,1);
+  if(c.survival){
+    const wave=battle.survivalWave||1;
+    const score=Math.floor(battle.time*18 + battle.stats.kills*90 + battle.stats.maxCombo*45 + wave*180);
+    const coins=Math.floor(Math.max(8,score/18)*coinBonusMult());
+    return{score,coins,time:Math.round(battle.time),kills:battle.stats.kills,missions:{text:`到達WAVE ${wave}\nランク：${survivalRank(score)}`,bonus:0},survivalRank:survivalRank(score),wave};
+  }
   const timeBonus=win?Math.max(0,820-Math.floor(battle.time*6)):0;
   const hpBonus=Math.floor(hpRate*560);
   const killBonus=battle.stats.kills*34, comboBonus=battle.stats.maxCombo*30, bossBonus=(win&&c.boss)?650:0, levelBonus=c.id*16;
   let score=win ? 620+timeBonus+hpBonus+killBonus+comboBonus+bossBonus+levelBonus
-                 : Math.floor(70 + killBonus*.45 + comboBonus*.35 + levelBonus*.25);
-  let coins = win ? Math.max(10,Math.floor(score/13)) : Math.max(2,Math.min(28,Math.floor(score/38)));
+                 : Math.floor(70 + killBonus*.30 + comboBonus*.22 + levelBonus*.12);
+  let coins = win ? Math.max(10,Math.floor(score/13)) : Math.max(1,Math.min(14,Math.floor(score/55)));
+  const streak=save.lossStreak[c.id]||0;
+  if(!win&&streak>0) coins=Math.max(1,Math.floor(coins*Math.pow(.65,Math.min(streak,4))));
+  const missions=getMissionResults(win);
+  if(win) coins+=missions.bonus;
   if(win&&!save.completed[c.id]) coins += c.id===0 ? 80 : 105+Math.floor(c.id*3);
   if(win&&save.completed[c.id]) coins=Math.floor(coins*.60);
   coins=Math.floor(coins*coinBonusMult());
-  return{score,coins,time:Math.round(battle.time),kills:battle.stats.kills};
+  return{score,coins,time:Math.round(battle.time),kills:battle.stats.kills,missions};
 }
 function finishBattle(win){
   if(!battle||battle.ended)return;battle.ended=true;battle.running=false;battle.win=win;
   const id=battle.config.id;const result=calculateScore(win);save.coins+=result.coins;
+  if(battle.config.survival){
+    if(result.score>(save.bestSurvival.score||0)) save.bestSurvival={score:result.score,rank:result.survivalRank,time:result.time,kills:result.kills};
+    save.bestScore.survival=Math.max(save.bestScore.survival||0,result.score);
+  }
+  if(!battle.config.survival){if(win)save.lossStreak[id]=0;else save.lossStreak[id]=(save.lossStreak[id]||0)+1;}
   if(win){addCrater(ENEMY_BASE,0,70);particles(ENEMY_BASE,0,90,"#ffb35c",45)}else{addCrater(PLAYER_BASE,0,60);particles(PLAYER_BASE,0,90,"#ff6b78",35)}
   let reward="";
-  if(win){
+  if(battle.config.survival){
+    reward=`到達WAVE ${result.wave}\nランク：${result.survivalRank}\nベスト：${save.bestSurvival.score} / ${save.bestSurvival.rank}`;
+  }else if(win){
     const firstClear=!save.completed[id];save.completed[id]=true;
     if(id===0){if(!save.tutorialCleared){save.tutorialCleared=true;save.unlockedLevel=Math.max(save.unlockedLevel,1)}}
     else if(id<MAX_LEVEL)save.unlockedLevel=Math.max(save.unlockedLevel,id+1);
     reward=rewardForClear(id,firstClear);
   }else reward="挑戦報酬としてコイン獲得";
-  save.bestScore[id]=Math.max(save.bestScore[id]||0,result.score);writeSave();
+  if(!battle.config.survival) save.bestScore[id]=Math.max(save.bestScore[id]||0,result.score);
+  writeSave();
 
-  el.resultTitle.textContent=win?"勝利！":"敗北...";
-  el.resultText.textContent=win?`${id===0?"チュートリアル":"Lv."+id}をクリアしました。\n${reward}`:`自軍拠点が破壊されました。\n${reward}`;
+  el.resultTitle.textContent=battle.config.survival?"サバイバル終了":(win?"勝利！":"敗北...");
+  el.resultText.textContent=battle.config.survival?`自軍陣地が破壊されました。\n${reward}`:(win?`${id===0?"チュートリアル":"Lv."+id}をクリアしました。\n${reward}`:`自軍拠点が破壊されました。\n${reward}`);
+  el.missionResult.textContent=result.missions?result.missions.text:"";
   el.scoreTotal.textContent=result.score;el.scoreCoins.textContent=`+${result.coins}`;el.scoreKills.textContent=result.kills;el.scoreTime.textContent=result.time+"s";
   const nextId=id===0?1:Math.min(MAX_LEVEL,id+1);
-  el.resultNextBtn.textContent=win?(id>=MAX_LEVEL?"マップへ":"次へ"):"リトライ";
-  el.resultNextBtn.onclick=()=>{if(!win){startStage(id);return}if(id>=MAX_LEVEL)showScreen("map");else if(isStageUnlocked(nextId))startStage(nextId);else showScreen("map")};
+  el.resultMapBtn.textContent=battle.config.survival?"ホームへ":"マップへ";
+  el.resultMapBtn.onclick=()=>showScreen(battle.config.survival?"menu":"map");
+  el.resultNextBtn.textContent=battle.config.survival?"もう一度":(win?(id>=MAX_LEVEL?"マップへ":"次へ"):"リトライ");
+  el.resultNextBtn.onclick=()=>{if(battle.config.survival){startStage(-1);return}if(!win){startStage(id);return}if(id>=MAX_LEVEL)showScreen("map");else if(isStageUnlocked(nextId))startStage(nextId);else showScreen("map")};
   showScreen("result");
 }
+function updateBossBar(){
+  const b=battle&&battle.bossUnit&&battle.bossUnit.hp>0?battle.bossUnit:null;
+  el.bossBar.classList.toggle("hidden",!b);
+  if(b){el.bossName.textContent=`WARNING: ${getUnit(b.type,"enemy",battle.config).label||"BOSS"}`;el.bossHp.style.width=`${clamp(b.hp/b.maxHp,0,1)*100}%`;}
+}
+function updateTutorialGuide(){
+  if(!battle||battle.config.id!==0||save.tutorialCleared){el.tutorialGuide.classList.add("hidden");return;}
+  let msg="ゲージは1秒ごとに増えます。まずライフル兵を出そう。";
+  if(battle.gauge>=3&&battle.units.filter(u=>u.side==="player").length===0)msg="下のライフル兵ボタンを押して出撃！";
+  else if(battle.units.filter(u=>u.side==="player").length>0)msg="敵拠点を壊すと勝利。クリアでガチャチケット獲得！";
+  el.tutorialGuide.textContent=msg;el.tutorialGuide.classList.remove("hidden");
+}
+
 function updateBattleUI(){
   if(!battle)return;
   const c=battle.config,pRate=clamp(battle.playerHp/c.playerHp,0,1),eRate=clamp(battle.enemyHp/c.enemyHp,0,1);
   el.playerHp.style.width=(pRate*100).toFixed(1)+"%";el.enemyHp.style.width=(eRate*100).toFixed(1)+"%";
   el.playerHpText.textContent=`HP ${Math.ceil(battle.playerHp)} / ${c.playerHp}`;el.enemyHpText.textContent=`HP ${Math.ceil(battle.enemyHp)} / ${c.enemyHp}`;
-  el.stageTitle.textContent=c.name;el.stageInfo.textContent=c.note;el.gaugeText.textContent=`${Math.floor(battle.gauge)} / ${c.gaugeMax}`;el.gaugeInner.style.width=`${battle.gauge/c.gaugeMax*100}%`;
+  el.stageTitle.textContent=c.survival?`SURVIVAL WAVE ${battle.survivalWave||1}`:c.name;
+  el.stageInfo.textContent=c.survival?`撃破 ${battle.stats.kills} / SCORE ${Math.floor((battle.time||0)*18 + battle.stats.kills*90)}\n陣地が破壊されたら終了`:c.note;
+  if(c.survival){el.enemyHpText.textContent=`WAVE ${battle.survivalWave||1}`;el.enemyHp.style.width=`${(battle.time%20)/20*100}%`;}
+  el.gaugeText.textContent=`${Math.floor(battle.gauge)} / ${c.gaugeMax}`;el.gaugeInner.style.width=`${battle.gauge/c.gaugeMax*100}%`;
+  const gw=document.querySelector(".gaugeWrap");
+  if(gw) gw.classList.toggle("gaugeMax", battle.gauge>=c.gaugeMax);
   const active=screen==="battle"&&battle.running&&!battle.paused&&!battle.ended;
+  updateBossBar();updateTutorialGuide();
   for(const btn of el.actionButtons.querySelectorAll("button")){
     const key=btn.dataset.key,item=ITEMS[key],ready=active&&battle.gauge>=item.cost;
     btn.disabled=!ready;btn.classList.toggle("ready",ready);
-    btn.innerHTML=`${item.label}<span class="cost">${item.cost}G</span><span class="desc">${battle.gauge<item.cost?"ゲージ不足":item.role}</span>`;
+    const reason=battle.gauge<item.cost?"ゲージ不足":item.role;
+    btn.innerHTML=actionButtonHTML(key,item,reason);
   }
 }
 
 function project(x,z,h=0){
-  const horizon=Math.max(118,H*.22),frontY=H-122,laneCenter=W*.50,depth=(z+1)/2,scale=.56+depth*.55;
-  return{x:laneCenter+(x-FIELD_W/2)*(W/1180)*scale,y:horizon+depth*(frontY-horizon)-h*scale,s:scale,depth};
+  const focus=battle&&battle.cameraFocus?battle.cameraFocus:null;
+  const camX=focus?((focus.x-FIELD_W/2)*.10):0;
+  const zoom=focus?1.08:1;
+  const horizon=Math.max(96,H*.18),frontY=H-104,laneCenter=W*.50,depth=(z+1)/2,scale=(.50+depth*.64)*zoom;
+  return{x:laneCenter+(x-FIELD_W/2-camX)*(W/1180)*scale,y:horizon+depth*(frontY-horizon)-h*scale,s:scale,depth};
 }
 function drawBackground(){
-  const t=battle?battle.time:performance.now()/1000,grd=ctx.createLinearGradient(0,0,0,H);grd.addColorStop(0,"#061020");grd.addColorStop(.55,"#0b1c2e");grd.addColorStop(1,"#0b1713");ctx.fillStyle=grd;ctx.fillRect(0,0,W,H);
-  ctx.fillStyle="rgba(255,255,255,.035)";for(let i=0;i<70;i++){const x=(i*97+(t*8)%97)%(W+120)-60,yy=40+((i*53)%Math.max(1,H-170));ctx.fillRect(x,yy,2,2)}
+  const id=battle&&battle.config?battle.config.id:1;
+  const t=battle?battle.time:performance.now()/1000;
+  let top="#061020", mid="#0b1c2e", bot="#0b1713";
+  if(id>=11&&id<=20){top="#0a1018";mid="#1b2430";bot="#171b1d";}
+  if(id>=21&&id<=30){top="#160f0a";mid="#3a2b1d";bot="#2b2115";}
+  if(id>=31&&id<=40){top="#020611";mid="#07122b";bot="#060915";}
+  if(id>=41){top="#12040a";mid="#1b0d22";bot="#09050c";}
+  const grd=ctx.createLinearGradient(0,0,0,H);grd.addColorStop(0,top);grd.addColorStop(.55,mid);grd.addColorStop(1,bot);ctx.fillStyle=grd;ctx.fillRect(0,0,W,H);
+  ctx.fillStyle=id>=31?"rgba(180,220,255,.045)":"rgba(255,255,255,.035)";
+  for(let i=0;i<70;i++){const x=(i*97+(t*8)%97)%(W+120)-60,yy=40+((i*53)%Math.max(1,H-170));ctx.fillRect(x,yy,2,2)}
+}
+function drawBackgroundObjects(){
+  const id=battle&&battle.config?battle.config.id:1;
+  const theme=stageTheme(id);
+  const horizon=Math.max(96,H*.18);
+  ctx.save();
+  ctx.globalAlpha=.72;
+  ctx.fillStyle=theme.far;
+  if(id<=20){
+    ctx.beginPath();ctx.moveTo(0,horizon+60);ctx.lineTo(W*.16,horizon+12);ctx.lineTo(W*.32,horizon+56);ctx.lineTo(W*.48,horizon+20);ctx.lineTo(W*.66,horizon+58);ctx.lineTo(W,horizon+18);ctx.lineTo(W,horizon+100);ctx.lineTo(0,horizon+100);ctx.closePath();ctx.fill();
+  }else{
+    for(let i=0;i<12;i++){const x=i*W/11-20,w=28+(i%3)*18,h=40+(i%5)*26;ctx.fillRect(x,horizon+70-h,w,h);}
+  }
+  ctx.globalAlpha=.38;
+  for(let i=0;i<5;i++){const x=(i*211+(battle?battle.time*8:0))%(W+180)-90;ctx.fillStyle="rgba(120,130,140,.18)";ctx.beginPath();ctx.ellipse(x,horizon+28+(i%2)*22,60,12,0,0,Math.PI*2);ctx.fill();}
+  if(id>=31){ctx.globalAlpha=.22;ctx.strokeStyle=theme.accent;ctx.lineWidth=2;for(let i=0;i<4;i++){const x=80+i*180;ctx.beginPath();ctx.moveTo(x,horizon+80);ctx.lineTo(x+80,horizon+25);ctx.lineTo(x+160,horizon+80);ctx.stroke();}}
+  ctx.restore();
+}
+function drawTerrainDetails(){
+  if(!battle)return;
+  const theme=stageTheme(battle.config.id);
+  if(battle.terrain){
+    for(const m of battle.terrain){
+      const p=project(m.x,m.z,0),s=p.s;
+      ctx.globalAlpha=m.a;
+      ctx.fillStyle=m.color||theme.speck;
+      if(m.type==="tire"){ctx.strokeStyle=m.color;ctx.lineWidth=3*s;ctx.beginPath();ctx.moveTo(p.x-m.w*s*.5,p.y);ctx.lineTo(p.x+m.w*s*.5,p.y+m.r*s*.15);ctx.stroke();}
+      else if(m.type==="rubble"){ctx.fillRect(p.x-m.w*s*.5,p.y-m.r*s*.2,m.w*s,m.r*s*.35);}
+      else{ctx.beginPath();ctx.ellipse(p.x,p.y,m.w*s*.35,m.r*s*.18,0,0,Math.PI*2);ctx.fill();}
+      ctx.globalAlpha=1;
+    }
+  }
+  if(battle.tracks){
+    for(const t of battle.tracks){const p=project(t.x,t.z,0),s=p.s,a=clamp(t.life/t.max,0,1);ctx.globalAlpha=.25*a;ctx.fillStyle=t.type==="tire"?"#080807":"#1d130d";ctx.beginPath();ctx.ellipse(p.x,p.y,t.type==="tire"?18*s:6*s,t.type==="tire"?4*s:3*s,0,0,Math.PI*2);ctx.fill();ctx.globalAlpha=1;}
+  }
 }
 function draw3DField(){
   const farL=project(0,-1),farR=project(FIELD_W,-1),nearL=project(0,1),nearR=project(FIELD_W,1);
-  const sky=ctx.createRadialGradient(W*.5,H*.24,20,W*.5,H*.24,W*.7);sky.addColorStop(0,"rgba(90,150,210,.20)");sky.addColorStop(1,"rgba(90,150,210,0)");ctx.fillStyle=sky;ctx.fillRect(0,0,W,H);
-  const ground=ctx.createLinearGradient(0,farL.y,0,nearL.y);ground.addColorStop(0,"#19324b");ground.addColorStop(1,"#10231f");ctx.fillStyle=ground;ctx.beginPath();ctx.moveTo(farL.x,farL.y);ctx.lineTo(farR.x,farR.y);ctx.lineTo(nearR.x,nearR.y);ctx.lineTo(nearL.x,nearL.y);ctx.closePath();ctx.fill();
-  ctx.strokeStyle="rgba(255,255,255,.12)";ctx.lineWidth=1.5;for(let z=-1;z<=1.001;z+=.25){const a=project(0,z),b=project(FIELD_W,z);ctx.beginPath();ctx.moveTo(a.x,a.y);ctx.lineTo(b.x,b.y);ctx.stroke()}for(let x=100;x<1000;x+=100){const a=project(x,-1),b=project(x,1);ctx.beginPath();ctx.moveTo(a.x,a.y);ctx.lineTo(b.x,b.y);ctx.stroke()}
+  const id=battle&&battle.config?battle.config.id:1;
+  const theme=stageTheme(id);
+  drawBackgroundObjects();
+  const sky=ctx.createRadialGradient(W*.5,H*.22,20,W*.5,H*.22,W*.7);sky.addColorStop(0,theme.sky);sky.addColorStop(1,"rgba(90,150,210,0)");ctx.fillStyle=sky;ctx.fillRect(0,0,W,H);
+  const ground=ctx.createLinearGradient(0,farL.y,0,nearL.y);ground.addColorStop(0,theme.ground1);ground.addColorStop(1,theme.ground2);ctx.fillStyle=ground;ctx.beginPath();ctx.moveTo(farL.x,farL.y);ctx.lineTo(farR.x,farR.y);ctx.lineTo(nearR.x,nearR.y);ctx.lineTo(nearL.x,nearL.y);ctx.closePath();ctx.fill();
+  drawTerrainDetails();
+  ctx.strokeStyle=id>=31?"rgba(140,170,255,.16)":"rgba(255,255,255,.11)";ctx.lineWidth=1.5;for(let z=-1;z<=1.001;z+=.25){const a=project(0,z),b=project(FIELD_W,z);ctx.beginPath();ctx.moveTo(a.x,a.y);ctx.lineTo(b.x,b.y);ctx.stroke()}for(let x=100;x<1000;x+=100){const a=project(x,-1),b=project(x,1);ctx.beginPath();ctx.moveTo(a.x,a.y);ctx.lineTo(b.x,b.y);ctx.stroke()}
   ctx.strokeStyle="rgba(255,215,106,.25)";ctx.lineWidth=3;let a=project(PLAYER_BASE+70,-1),b=project(PLAYER_BASE+70,1);ctx.beginPath();ctx.moveTo(a.x,a.y);ctx.lineTo(b.x,b.y);ctx.stroke();a=project(ENEMY_BASE-70,-1);b=project(ENEMY_BASE-70,1);ctx.beginPath();ctx.moveTo(a.x,a.y);ctx.lineTo(b.x,b.y);ctx.stroke();
 }
 function roundRect(x,y,w,h,r){ctx.beginPath();ctx.moveTo(x+r,y);ctx.arcTo(x+w,y,x+w,y+h,r);ctx.arcTo(x+w,y+h,x,y+h,r);ctx.arcTo(x,y+h,x,y,r);ctx.arcTo(x,y,x+w,y,r);ctx.closePath()}
@@ -899,20 +1864,24 @@ function drawObstacle3D(o){
   if(o.burn){const fp=project(o.x,o.z,64);ctx.fillStyle="#ff7a32";ctx.beginPath();ctx.moveTo(fp.x,fp.y-30*fp.s);ctx.quadraticCurveTo(fp.x+16*fp.s,fp.y-14*fp.s,fp.x+4*fp.s,fp.y);ctx.quadraticCurveTo(fp.x-12*fp.s,fp.y-14*fp.s,fp.x,fp.y-30*fp.s);ctx.fill()}
 }
 function drawUnit3D(u){
-  const stat=getUnit(u.type,u.side,battle.config),p=project(u.x,u.z,0),s=p.s,color=u.flash>0?"#fff":stat.color,dir=u.side==="player"?1:-1;
-  const armored=["tank","heavy","fortress","missile","giant","final"].includes(u.type);
+  const stat=getUnit(u.type,u.side,battle.config),p=project(u.x,u.z,0),s=p.s,color=u.flash>0?"#fff":stat.color,dir=u.side==="player"?1:-1,aim=u.aimDir|| (u.side==="player"?1:-1);
+  const armored=["tank","heavy","plasmaTank","fortress","missile","giant","final"].includes(u.type);
   const drawX=u.x-(u.recoil||0)*u.dir*14;
-  if(armored){drawBox3D(drawX,u.z,stat.radius*2.15,stat.radius*1.65,stat.radius*1.35,color,u.side==="player"?"#d9ffe4":"#ffd0bd");const tp=project(drawX,u.z,stat.radius*1.45);ctx.fillStyle=u.side==="player"?"#173f25":"#4e1e10";roundRect(tp.x-16*s,tp.y-15*s,32*s,20*s,5*s);ctx.fill();ctx.strokeStyle="#e8fff3";ctx.lineWidth=6*s;ctx.beginPath();ctx.moveTo(tp.x+10*s*dir,tp.y-5*s);ctx.lineTo(tp.x+(stat.radius+32)*s*dir,tp.y-12*s);ctx.stroke()}
-  else{drawBox3D(drawX,u.z,20,20,40,color,"rgba(255,255,255,.22)");const head=project(drawX,u.z,52);ctx.fillStyle=color;ctx.beginPath();ctx.arc(head.x,head.y,8*s,0,Math.PI*2);ctx.fill();const gp=project(drawX,u.z,33);if(u.type==="shield"){ctx.fillStyle=u.side==="player"?"#dffaff":"#ffd2c2";roundRect(gp.x+5*s*dir,gp.y-16*s,13*s,30*s,4*s);ctx.fill()}else{ctx.strokeStyle=u.type==="rocket"?"#ffd76a":u.type==="railgun"?"#9de7ff":"#fff";ctx.lineWidth=(u.type==="rocket"||u.type==="railgun"?5:3)*s;ctx.beginPath();ctx.moveTo(gp.x+8*s*dir,gp.y);ctx.lineTo(gp.x+(u.type==="rocket"?34:u.type==="railgun"?42:25)*s*dir,gp.y-8*s);ctx.stroke()}if(u.type==="medic"){const mp=project(drawX,u.z,62);ctx.fillStyle="#fff";ctx.font=`${Math.max(10,16*s)}px system-ui`;ctx.textAlign="center";ctx.fillText("+",mp.x,mp.y)}}
+  if(armored){drawBox3D(drawX,u.z,stat.radius*2.15,stat.radius*1.65,stat.radius*1.35,color,u.side==="player"?"#d9ffe4":"#ffd0bd");const tp=project(drawX,u.z,stat.radius*1.45);ctx.fillStyle=u.side==="player"?"#173f25":"#4e1e10";roundRect(tp.x-16*s,tp.y-15*s,32*s,20*s,5*s);ctx.fill();ctx.strokeStyle="#e8fff3";ctx.lineWidth=6*s;ctx.beginPath();ctx.moveTo(tp.x+10*s*aim,tp.y-5*s);ctx.lineTo(tp.x+(stat.radius+32)*s*aim,tp.y-12*s);ctx.stroke();ctx.fillStyle="rgba(0,0,0,.22)";for(let i=-1;i<=1;i+=2){ctx.fillRect(p.x+i*stat.radius*.35*s,p.y-8*s,stat.radius*.55*s,4*s)}}
+  else{drawBox3D(drawX,u.z,20,20,40,color,"rgba(255,255,255,.22)");const head=project(drawX,u.z,52);ctx.fillStyle=color;ctx.beginPath();ctx.arc(head.x,head.y,8*s,0,Math.PI*2);ctx.fill();const gp=project(drawX,u.z,33);if(u.type==="shield"){ctx.fillStyle=u.side==="player"?"#dffaff":"#ffd2c2";roundRect(gp.x+5*s*aim,gp.y-16*s,13*s,30*s,4*s);ctx.fill()}else{ctx.strokeStyle=u.type==="rocket"?"#ffd76a":u.type==="railgun"?"#9de7ff":"#fff";ctx.lineWidth=(u.type==="rocket"||u.type==="railgun"?5:3)*s;ctx.beginPath();ctx.moveTo(gp.x+8*s*aim,gp.y);ctx.lineTo(gp.x+(u.type==="rocket"?34:u.type==="railgun"?42:25)*s*aim,gp.y-8*s);ctx.stroke();const step=Math.sin((u.walk||0)+u.x*.04);ctx.strokeStyle=color;ctx.lineWidth=3*s;ctx.beginPath();ctx.moveTo(p.x-5*s,p.y-8*s);ctx.lineTo(p.x-(8+step*4)*s,p.y+8*s);ctx.moveTo(p.x+5*s,p.y-8*s);ctx.lineTo(p.x+(8+step*-4)*s,p.y+8*s);ctx.stroke()}if(u.type==="medic"){const mp=project(drawX,u.z,62);ctx.fillStyle="#fff";ctx.font=`${Math.max(10,16*s)}px system-ui`;ctx.textAlign="center";ctx.fillText("+",mp.x,mp.y)}}
   if(u.side==="player"&&battle.rallyTimer>0){const rp=project(drawX,u.z,8);ctx.strokeStyle="rgba(255,221,120,.7)";ctx.lineWidth=2;ctx.beginPath();ctx.arc(rp.x,rp.y,(stat.radius+18)*s,0,Math.PI*2);ctx.stroke()}
   const hp=project(drawX,u.z,stat.radius*2.3+28),rate=clamp(u.hp/u.maxHp,0,1);ctx.fillStyle="rgba(0,0,0,.55)";roundRect(hp.x-24*s,hp.y,48*s,5*s,3*s);ctx.fill();ctx.fillStyle=u.side==="player"?"#7af0a2":"#ff6b78";roundRect(hp.x-24*s,hp.y,48*s*rate,5*s,3*s);ctx.fill();
 }
 function drawMine3D(m){const p=project(m.x,m.z,2);ctx.fillStyle="#222";ctx.beginPath();ctx.ellipse(p.x,p.y,13*p.s,7*p.s,0,0,Math.PI*2);ctx.fill();ctx.fillStyle="#ffd76a";ctx.beginPath();ctx.arc(p.x,p.y-3*p.s,3*p.s,0,Math.PI*2);ctx.fill()}
+function drawMuzzleFlashes3D(){
+  if(!battle||!battle.flashes)return;
+  for(const f of battle.flashes){const p=project(f.x,f.z,f.h);const a=clamp(f.life/f.max,0,1);ctx.globalAlpha=a;ctx.fillStyle=f.color;ctx.beginPath();ctx.arc(p.x,p.y,f.size*p.s,0,Math.PI*2);ctx.fill();ctx.globalAlpha=.35*a;ctx.fillStyle="#fff";ctx.beginPath();ctx.arc(p.x,p.y,f.size*.45*p.s,0,Math.PI*2);ctx.fill();ctx.globalAlpha=1;}
+}
 function drawProjectiles3D(){if(!battle)return;for(const p of battle.projectiles){const pp=project(p.x,p.z,p.h);ctx.fillStyle=p.miss?"#bcae91":p.color;ctx.beginPath();ctx.arc(pp.x,pp.y,p.size*pp.s,0,Math.PI*2);ctx.fill();ctx.strokeStyle=p.miss?"#bcae91":p.color;ctx.globalAlpha=.35;ctx.lineWidth=p.size*pp.s;ctx.beginPath();ctx.moveTo(pp.x-(p.side==="player"?18:-18)*pp.s,pp.y+5*pp.s);ctx.lineTo(pp.x,pp.y);ctx.stroke();ctx.globalAlpha=1}}
 function drawParticles3D(){if(!battle)return;for(const p of battle.particles){const pp=project(p.x,p.z,p.h);ctx.globalAlpha=clamp(p.life/p.max,0,1);ctx.fillStyle=p.color;ctx.beginPath();ctx.arc(pp.x,pp.y,p.r*pp.s,0,Math.PI*2);ctx.fill()}ctx.globalAlpha=1}
 function drawFloatTexts3D(){if(!battle)return;ctx.textAlign="center";ctx.font="900 20px system-ui";for(const f of battle.floatTexts){const p=project(f.x,f.z,f.h);ctx.globalAlpha=clamp(f.life/f.max,0,1);ctx.fillStyle=f.color;ctx.fillText(f.text,p.x,p.y)}ctx.globalAlpha=1}
 function drawMenuScene(){
-  drawBackground();draw3DField();const old=battle;battle={config:getStageConfig(1),rallyTimer:0};
+  drawBackground();draw3DField();const old=battle;battle={config:getStageConfig(1),rallyTimer:0,playerHp:getStageConfig(1).playerHp,enemyHp:getStageConfig(1).enemyHp,units:[],projectiles:[],particles:[],floatTexts:[],craters:[],tracks:[],flashes:[],terrain:createTerrainMarks(getStageConfig(1)),obstacles:[],mines:[]};
   drawBase3D(PLAYER_BASE,"player");drawBase3D(ENEMY_BASE,"enemy");
   drawUnit3D({type:"rifle",side:"player",x:330,z:-.35,hp:100,maxHp:100,flash:0,recoil:0});
   drawUnit3D({type:"shield",side:"player",x:390,z:.15,hp:100,maxHp:100,flash:0,recoil:0});
@@ -926,13 +1895,14 @@ function drawBattle(){
   ctx.save();ctx.translate(sx,sy);drawBackground();draw3DField();drawCraters3D();drawBase3D(PLAYER_BASE,"player");drawBase3D(ENEMY_BASE,"enemy");
   const drawables=[];for(const o of battle.obstacles)drawables.push({z:o.z,type:"obstacle",obj:o});for(const m of battle.mines)drawables.push({z:m.z,type:"mine",obj:m});for(const u of battle.units)drawables.push({z:u.z,type:"unit",obj:u});drawables.sort((a,b)=>a.z-b.z);
   for(const d of drawables){if(d.type==="obstacle")drawObstacle3D(d.obj);if(d.type==="mine")drawMine3D(d.obj);if(d.type==="unit")drawUnit3D(d.obj)}
-  drawProjectiles3D();drawParticles3D();drawFloatTexts3D();ctx.restore();
+  drawMuzzleFlashes3D();drawProjectiles3D();drawParticles3D();drawFloatTexts3D();ctx.restore();
+  if((battle.warningTimer||0)>0){ctx.fillStyle=`rgba(0,0,0,${0.42*Math.min(1,battle.warningTimer/1.4)})`;ctx.fillRect(0,0,W,H);ctx.fillStyle="#ff6b78";ctx.font="900 42px system-ui";ctx.textAlign="center";ctx.fillText("WARNING",W/2,H*.36)}
   if(battle.paused&&screen==="battle"){ctx.fillStyle="rgba(0,0,0,.46)";ctx.fillRect(0,0,W,H);ctx.fillStyle="#fff";ctx.font="900 34px system-ui";ctx.textAlign="center";ctx.fillText("PAUSE",W/2,H/2)}
 }
 function loop(now){
   const dt=Math.min(.033,(now-last)/1000||0);last=now;
   if(screen==="battle"||screen==="result")drawBattle();else drawMenuScene();
-  updateBattle(dt);
+  updateBattle(screen==="battle"?dt*battleSpeed:dt);
   if(!battle&&toastTimer>0){toastTimer-=dt;if(toastTimer<=0)el.toast.classList.add("hidden")}
   requestAnimationFrame(loop);
 }
@@ -941,14 +1911,27 @@ el.openMapBtn.onclick=()=>showScreen("map");
 el.openDeckBtn.onclick=()=>showScreen("deck");
 el.openShopBtn.onclick=()=>showScreen("shop");
 el.openGachaBtn.onclick=()=>showScreen("gacha");
+el.openCodexBtn.onclick=()=>showScreen("codex");
+el.openSaveBtn.onclick=()=>showScreen("save");
+el.startSurvivalBtn.onclick=()=>{if(!hasDeckUnit()){showToast("デッキにユニットを1体以上入れてください");showScreen("deck");return}startStage(-1)};
+el.adminCodeBtn.onclick=applyAdminCode;
+el.adminCodeInput.onkeydown=e=>{if(e.key==="Enter")applyAdminCode()};
 el.continueBtn.onclick=()=>{if(!hasDeckUnit()){showToast("デッキにユニットを1体以上入れてください");showScreen("deck");return}startStage(save.tutorialCleared?Math.min(save.unlockedLevel,MAX_LEVEL):0)};
 el.resetBtn.onclick=()=>{if(confirm("セーブデータを初期化しますか？")){save=defaultSave();writeSave();renderMenu();showToast("セーブを初期化しました")}};
 el.mapBackBtn.onclick=()=>showScreen("menu");el.mapDeckBtn.onclick=()=>showScreen("deck");
 el.deckBackBtn.onclick=()=>showScreen("menu");el.deckAutoBtn.onclick=autoDeck;
 el.shopBackBtn.onclick=()=>showScreen("menu");el.shopDeckBtn.onclick=()=>showScreen("deck");
-el.gachaBackBtn.onclick=()=>showScreen("menu");el.gachaShopBtn.onclick=()=>showScreen("shop");el.drawGachaBtn.onclick=drawGacha;
-el.pauseBtn.onclick=()=>{if(!battle||battle.ended)return;battle.paused=!battle.paused;el.pauseBtn.textContent=battle.paused?"再開":"一時停止";updateBattleUI()};
+el.codexBackBtn.onclick=()=>showScreen("menu");el.codexDeckBtn.onclick=()=>showScreen("deck");
+el.gachaBackBtn.onclick=()=>showScreen("menu");el.gachaShopBtn.onclick=()=>showScreen("shop");el.drawGachaBtn.onclick=drawGacha;el.drawLegendGachaBtn.onclick=drawLegendGacha;
+el.pauseBtn.onclick=()=>{if(!battle||battle.ended)return;battle.paused=!battle.paused;el.pauseBtn.textContent=battle.paused?"再開":"一時停止";el.pauseMenu.classList.toggle("hidden",!battle.paused);updateBattleUI()};
+el.resumeBtn.onclick=()=>{if(!battle)return;battle.paused=false;el.pauseBtn.textContent="一時停止";el.pauseMenu.classList.add("hidden");updateBattleUI()};
+el.homeFromPauseBtn.onclick=()=>{if(!battle)return;battle.paused=false;battle.running=false;el.pauseMenu.classList.add("hidden");el.pauseBtn.textContent="一時停止";showScreen("menu")};
+el.speedBtn.onclick=()=>{battleSpeed=battleSpeed===1?1.5:battleSpeed===1.5?2:1;el.speedBtn.textContent=`速度 ${battleSpeed}x`;};
 el.resultMapBtn.onclick=()=>showScreen("map");
+el.saveBackBtn.onclick=()=>showScreen("menu");
+el.saveExportBtn.onclick=()=>renderSaveCode();
+el.saveCopyBtn.onclick=async()=>{renderSaveCode();try{await navigator.clipboard.writeText(el.saveCodeText.value);showToast("セーブコードをコピーしました")}catch(e){showToast("コピーできない場合は手動で選択してください")}};
+el.saveImportBtn.onclick=()=>{try{loadSaveCode(el.saveCodeText.value);showToast("セーブコードを読み込みました");renderMenu();showScreen("menu")}catch(e){showToast(e.message||"読み込みに失敗しました")}};
 
 renderMenu();showScreen("menu");requestAnimationFrame(loop);
 })();
