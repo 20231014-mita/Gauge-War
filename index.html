@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0,user-scalable=no,viewport-fit=cover" />
-<title>Gauge War 2D Ultimate Boss Neon</title>
+<title>Gauge War 2D Gacha FX Complete</title>
 <style>
 :root{
   --bg:#040712;
@@ -179,6 +179,24 @@ button:disabled{opacity:.42;filter:grayscale(.75);box-shadow:none}
 .itemCard.locked{opacity:.56;filter:grayscale(.82)}
 .itemCard.legendary{border-color:rgba(255,215,106,.70);box-shadow:0 0 24px rgba(255,215,106,.16),0 0 40px rgba(181,124,255,.10)}
 .itemCard.special{border-color:rgba(181,124,255,.92);box-shadow:0 0 30px rgba(181,124,255,.28),0 0 56px rgba(255,123,220,.14)}
+
+.itemCard.inDeck{
+  border-color:rgba(255,215,106,.82);
+  box-shadow:0 0 24px rgba(255,215,106,.20),0 0 38px rgba(103,214,255,.08);
+}
+.itemCard.inDeck:after{
+  content:"DECK";
+  position:absolute;
+  right:10px;
+  top:8px;
+  color:#172033;
+  background:#ffd76a;
+  border-radius:999px;
+  padding:2px 7px;
+  font-size:9px;
+  font-weight:1000;
+}
+
 .itemIcon{
   width:50px;height:50px;border-radius:14px;display:flex;align-items:center;justify-content:center;
   background:rgba(255,255,255,.12);font-size:24px;
@@ -208,6 +226,210 @@ button:disabled{opacity:.42;filter:grayscale(.75);box-shadow:none}
   font-family:ui-monospace,Menlo,Consolas,monospace;font-size:12px;
 }
 .badge{position:absolute;left:10px;bottom:4px;font-size:10px;color:rgba(255,255,255,.45);pointer-events:none}
+
+.adminBox{
+  margin-top:12px;
+  padding:12px;
+  border-radius:18px;
+  border:1px solid rgba(255,215,106,.32);
+  background:linear-gradient(180deg,rgba(255,215,106,.08),rgba(103,214,255,.04));
+  text-align:left;
+}
+.adminBox label{
+  display:block;
+  font-size:12px;
+  color:var(--muted);
+  margin-bottom:6px;
+  font-weight:1000;
+}
+.adminLine{
+  display:grid;
+  grid-template-columns:1fr auto;
+  gap:8px;
+}
+.adminLine input{
+  min-height:48px;
+  border-radius:14px;
+  border:1px solid rgba(103,214,255,.35);
+  background:rgba(0,0,0,.38);
+  color:#eef7ff;
+  padding:0 12px;
+  font-size:18px;
+  font-weight:1000;
+  letter-spacing:.18em;
+  outline:none;
+}
+.adminLine input:focus{
+  border-color:rgba(255,215,106,.65);
+  box-shadow:0 0 18px rgba(255,215,106,.18);
+}
+
+
+.starText{
+  color:#ffd76a;
+  font-size:20px;
+  font-weight:1000;
+  text-shadow:0 0 14px rgba(255,215,106,.45);
+}
+.missionText{
+  color:#dffaff;
+  font-size:12px;
+  line-height:1.55;
+  white-space:pre-line;
+}
+.upgradeLv{
+  display:inline-block;
+  margin-left:6px;
+  color:#ffd76a;
+  font-size:11px;
+}
+.enemyTag{
+  display:inline-block;
+  margin-left:6px;
+  color:#ffb6c0;
+  font-size:10px;
+}
+
+.gachaStage{
+  position:relative;
+  min-height:220px;
+  border-radius:22px;
+  overflow:hidden;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  flex-direction:column;
+  background:
+    radial-gradient(circle at 50% 45%,rgba(103,214,255,.18),transparent 38%),
+    linear-gradient(180deg,rgba(10,24,48,.88),rgba(3,8,20,.92));
+  border:1px solid rgba(103,214,255,.26);
+}
+.gachaStage.legend{
+  background:
+    radial-gradient(circle at 50% 45%,rgba(255,215,106,.30),transparent 40%),
+    radial-gradient(circle at 50% 55%,rgba(181,124,255,.13),transparent 55%),
+    linear-gradient(180deg,rgba(54,35,10,.90),rgba(5,8,20,.94));
+  border-color:rgba(255,215,106,.62);
+}
+.gachaStage.special{
+  background:
+    radial-gradient(circle at 50% 45%,rgba(181,124,255,.44),transparent 42%),
+    radial-gradient(circle at 50% 55%,rgba(255,123,220,.25),transparent 58%),
+    linear-gradient(180deg,rgba(35,11,62,.94),rgba(5,5,24,.96));
+  border-color:rgba(181,124,255,.86);
+}
+.gachaAura{
+  position:absolute;
+  width:180px;
+  height:180px;
+  border-radius:50%;
+  background:conic-gradient(from 0deg,transparent,rgba(103,214,255,.55),transparent,rgba(255,255,255,.28),transparent);
+  filter:blur(.2px);
+  opacity:.55;
+  animation:gachaSpin 2.6s linear infinite;
+}
+.gachaStage.legend .gachaAura{
+  background:conic-gradient(from 0deg,transparent,rgba(255,215,106,.75),transparent,rgba(255,255,255,.45),transparent);
+  width:210px;height:210px;opacity:.75;
+}
+.gachaStage.special .gachaAura{
+  background:conic-gradient(from 0deg,rgba(181,124,255,.0),rgba(181,124,255,.95),rgba(255,255,255,.7),rgba(255,123,220,.75),rgba(181,124,255,.0));
+  width:245px;height:245px;opacity:.92;
+  animation:gachaSpin .95s linear infinite;
+}
+.gachaCapsule{
+  position:relative;
+  z-index:2;
+  width:104px;
+  height:104px;
+  border-radius:50%;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  font-size:46px;
+  color:#0c1730;
+  background:linear-gradient(145deg,#67d6ff,#eafaff);
+  box-shadow:0 0 28px rgba(103,214,255,.50), inset 0 0 22px rgba(255,255,255,.35);
+  animation:gachaFloat 1.8s ease-in-out infinite;
+}
+.gachaStage.legend .gachaCapsule{
+  background:linear-gradient(145deg,#ffd76a,#fff4bb);
+  box-shadow:0 0 36px rgba(255,215,106,.75),0 0 70px rgba(255,215,106,.28),inset 0 0 24px rgba(255,255,255,.45);
+}
+.gachaStage.special .gachaCapsule{
+  background:radial-gradient(circle at 35% 30%,#fff,#e4c9ff 28%,#a348ff 62%,#371073 100%);
+  color:white;
+  box-shadow:0 0 44px rgba(181,124,255,.95),0 0 90px rgba(255,123,220,.35),inset 0 0 26px rgba(255,255,255,.35);
+  animation:specialPulse .75s ease-in-out infinite alternate;
+}
+.gachaResultName{
+  position:relative;
+  z-index:2;
+  margin-top:14px;
+  font-size:22px;
+  font-weight:1000;
+  white-space:pre-line;
+  line-height:1.45;
+  text-shadow:0 0 18px rgba(255,255,255,.45);
+}
+.gachaRarity{
+  position:relative;
+  z-index:2;
+  margin-top:6px;
+  font-size:13px;
+  font-weight:1000;
+  color:#ffd76a;
+  letter-spacing:.12em;
+}
+.gachaCutin{
+  position:absolute;
+  inset:0;
+  z-index:4;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  font-size:34px;
+  font-weight:1000;
+  letter-spacing:.08em;
+  color:white;
+  text-shadow:0 0 18px rgba(255,255,255,.65),0 0 38px rgba(181,124,255,.8);
+  background:linear-gradient(90deg,transparent,rgba(0,0,0,.62),transparent);
+  opacity:0;
+  pointer-events:none;
+}
+.gachaStage.play .gachaCapsule{animation:gachaOpen .9s ease-in-out 1}
+.gachaStage.play .gachaAura{animation:gachaSpin .55s linear infinite}
+.gachaStage.play .gachaCutin{animation:cutinFlash 1.05s ease-out 1}
+.gachaStage.special.play:after{
+  content:"";
+  position:absolute;
+  inset:-35%;
+  background:radial-gradient(circle,rgba(255,255,255,.55),rgba(181,124,255,.32),transparent 55%);
+  animation:specialBoom 1.2s ease-out 1;
+  pointer-events:none;
+}
+@keyframes gachaSpin{to{transform:rotate(360deg)}}
+@keyframes gachaFloat{0%,100%{transform:translateY(0)}50%{transform:translateY(-8px)}}
+@keyframes specialPulse{from{transform:scale(1);filter:brightness(1)}to{transform:scale(1.08);filter:brightness(1.35)}}
+@keyframes gachaOpen{
+  0%{transform:scale(1) rotate(0deg)}
+  24%{transform:scale(1.18) rotate(-8deg)}
+  48%{transform:scale(.92) rotate(8deg)}
+  70%{transform:scale(1.28) rotate(0deg);filter:brightness(2)}
+  100%{transform:scale(1) rotate(0deg)}
+}
+@keyframes cutinFlash{
+  0%{opacity:0;transform:translateX(-60px) skewX(-12deg)}
+  20%{opacity:1;transform:translateX(0) skewX(-12deg)}
+  55%{opacity:1;transform:translateX(0) skewX(-12deg)}
+  100%{opacity:0;transform:translateX(70px) skewX(-12deg)}
+}
+@keyframes specialBoom{
+  0%{transform:scale(.35);opacity:1}
+  100%{transform:scale(1.7);opacity:0}
+}
+
+
 @media (max-width:820px){
   .logo{font-size:38px!important}
   .topHud{grid-template-columns:1fr 1fr}
@@ -221,6 +443,7 @@ button:disabled{opacity:.42;filter:grayscale(.75);box-shadow:none}
   .scoreGrid{grid-template-columns:1fr 1fr}
   .fullHeader{grid-template-columns:1fr 1fr}
   .fullHeader h2{grid-column:1/3;order:-1}
+  .adminLine{grid-template-columns:1fr}
 }
 </style>
 </head>
@@ -261,8 +484,8 @@ button:disabled{opacity:.42;filter:grayscale(.75);box-shadow:none}
 
   <div id="menuScreen" class="screen">
     <div class="card panel">
-      <h1 class="logo">Gauge War<br>2D Boss Neon</h1>
-      <p>2D横視点のラインバトル。ユニット・伝説兵器・特別ユニットで敵拠点を破壊しよう。</p>
+      <h1 class="logo">Gauge War<br>2D</h1>
+      <p>2D横視点ラインバトル</p>
       <div class="statRow">
         <div class="stat"><b id="statStage">1</b><span>到達</span></div>
         <div class="stat"><b id="statCoins">0</b><span>コイン</span></div>
@@ -275,8 +498,12 @@ button:disabled{opacity:.42;filter:grayscale(.75);box-shadow:none}
         <button id="survivalBtn" class="specialButton">サバイバル</button>
       </div>
       <div class="menuButtons">
-        <button id="openUnitsBtn">ユニット</button>
+        <button id="openUnitsBtn">デッキ</button>
+        <button id="openUpgradeBtn">強化</button>
+      </div>
+      <div class="menuButtons">
         <button id="openShopBtn">ショップ</button>
+        <button id="openCodexBtn">図鑑</button>
       </div>
       <div class="menuButtons">
         <button id="openGachaBtn" class="legendButton">ガチャ</button>
@@ -286,7 +513,13 @@ button:disabled{opacity:.42;filter:grayscale(.75);box-shadow:none}
         <button id="continueBtn">続きから</button>
         <button id="resetBtn">セーブ初期化</button>
       </div>
-      <p class="menuMini">バグ修正済み / ボス追加 / ネオンUI / 伝説1.5倍級 / 特別ユニットの紫球体必殺を強化</p>
+      <div class="adminBox">
+        <label for="adminCodeInput">管理者コード</label>
+        <div class="adminLine">
+          <input id="adminCodeInput" inputmode="numeric" maxlength="4" placeholder="4桁コード" />
+          <button id="adminCodeBtn">実行</button>
+        </div>
+      </div>
     </div>
   </div>
 
@@ -299,7 +532,7 @@ button:disabled{opacity:.42;filter:grayscale(.75);box-shadow:none}
       </div>
       <div class="scroll">
         <div class="area">
-          <h3>ステージ選択 <span>ボス戦あり</span></h3>
+          <h3>ステージ選択</h3>
           <div id="mapGrid" class="mapGrid"></div>
         </div>
       </div>
@@ -310,13 +543,47 @@ button:disabled{opacity:.42;filter:grayscale(.75);box-shadow:none}
     <div class="card fullPanel">
       <div class="fullHeader">
         <button id="unitsBackBtn">戻る</button>
-        <h2>ユニット・スキル</h2>
-        <button id="unitsToGachaBtn">ガチャ</button>
+        <h2>デッキ</h2>
+        <button id="deckAutoBtn">おすすめ</button>
       </div>
       <div class="scroll">
         <div class="area">
-          <h3>所持一覧 <span>所持中のものだけ戦闘ボタンに出ます</span></h3>
+          <h3>デッキ編成 <span>最大10個</span></h3>
+          <p class="menuMini" id="deckCountText">0 / 10</p>
           <div id="unitsGrid" class="grid2"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+  <div id="upgradeScreen" class="hidden">
+    <div class="card fullPanel">
+      <div class="fullHeader">
+        <button id="upgradeBackBtn">戻る</button>
+        <h2>ユニット強化</h2>
+        <button id="upgradeDeckBtn">デッキ</button>
+      </div>
+      <div class="scroll">
+        <div class="area">
+          <h3>強化 <span id="upgradeCoinText">0 COIN</span></h3>
+          <div id="upgradeGrid" class="grid2"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div id="codexScreen" class="hidden">
+    <div class="card fullPanel">
+      <div class="fullHeader">
+        <button id="codexBackBtn">戻る</button>
+        <h2>図鑑</h2>
+        <button id="codexDeckBtn">デッキ</button>
+      </div>
+      <div class="scroll">
+        <div class="area">
+          <h3>ユニット・敵・ボス</h3>
+          <div id="codexGrid" class="grid2"></div>
         </div>
       </div>
     </div>
@@ -331,7 +598,7 @@ button:disabled{opacity:.42;filter:grayscale(.75);box-shadow:none}
       </div>
       <div class="scroll">
         <div class="area">
-          <h3>購入 <span>コインで買えます</span></h3>
+          <h3>購入</h3>
           <div id="shopGrid" class="grid2"></div>
         </div>
       </div>
@@ -341,7 +608,7 @@ button:disabled{opacity:.42;filter:grayscale(.75);box-shadow:none}
   <div id="gachaScreen" class="screen hidden">
     <div class="card panel">
       <h1>ガチャ</h1>
-      <p>通常ガチャ：チケット1枚 / 伝説ガチャ：チケット5枚<br>伝説ガチャは0.1%で特別ユニットが出現します。</p>
+      <p>通常：1枚 / 伝説：5枚</p>
       <div class="statRow">
         <div class="stat"><b id="gachaTickets">0</b><span>チケット</span></div>
         <div class="stat"><b id="gachaCoins">0</b><span>コイン</span></div>
@@ -349,9 +616,12 @@ button:disabled{opacity:.42;filter:grayscale(.75);box-shadow:none}
         <div class="stat"><b id="gachaSpecial">未所持</b><span>特別ユニット</span></div>
         <div class="stat"><b>0.1%</b><span>特別確率</span></div>
       </div>
-      <div class="area" style="text-align:center">
-        <h3 style="justify-content:center">結果</h3>
-        <div id="gachaText" style="font-weight:1000;font-size:18px;line-height:1.7">チケットで強力なユニットを獲得。</div>
+      <div id="gachaStage" class="gachaStage">
+        <div class="gachaAura"></div>
+        <div id="gachaCapsule" class="gachaCapsule">🎫</div>
+        <div id="gachaText" class="gachaResultName">結果が表示されます</div>
+        <div id="gachaRarity" class="gachaRarity">READY</div>
+        <div id="gachaCutin" class="gachaCutin">OPEN</div>
       </div>
       <div class="menuButtons">
         <button id="normalGachaBtn">通常ガチャ<br><span class="menuMini">チケット1枚</span></button>
@@ -373,13 +643,13 @@ button:disabled{opacity:.42;filter:grayscale(.75);box-shadow:none}
       </div>
       <div class="scroll">
         <div class="area">
-          <h3>セーブコード <span>コピーして保管</span></h3>
+          <h3>セーブコード</h3>
           <textarea id="saveBox" class="saveText" placeholder="ここにセーブコードが出ます。読み込む時はここに貼り付けます。"></textarea>
           <div class="menuButtons">
             <button id="copyCodeBtn">コピー</button>
             <button id="loadCodeBtn">読み込む</button>
           </div>
-          <p class="menuMini">ブラウザにも自動保存されます。別端末ではセーブコードを使ってください。</p>
+          <p class="menuMini">自動保存あり</p>
         </div>
       </div>
     </div>
@@ -389,6 +659,8 @@ button:disabled{opacity:.42;filter:grayscale(.75);box-shadow:none}
     <div class="resultPanel">
       <h1 id="resultTitle">勝利！</h1>
       <p id="resultText">ステージクリア</p>
+      <p id="resultStars" class="starText"></p>
+      <p id="resultMissions" class="missionText"></p>
       <div class="scoreGrid">
         <div class="scoreCell"><b id="scoreTotal">0</b><span>スコア</span></div>
         <div class="scoreCell"><b id="scoreCoins">0</b><span>コイン</span></div>
@@ -403,7 +675,7 @@ button:disabled{opacity:.42;filter:grayscale(.75);box-shadow:none}
   </div>
 
   <div id="toast" class="toast hidden"></div>
-  <div class="badge">GAUGE WAR 2D BOSS NEON</div>
+  <div class="badge">GAUGE WAR 2D GACHA FX</div>
 </div>
 
 <script>
@@ -414,17 +686,17 @@ const canvas = document.getElementById("game");
 const ctx = canvas.getContext("2d");
 const el = {};
 [
- "battleHud","menuScreen","mapScreen","unitsScreen","shopScreen","gachaScreen","saveScreen","resultScreen","toast",
+ "battleHud","menuScreen","mapScreen","unitsScreen","upgradeScreen","codexScreen","shopScreen","gachaScreen","saveScreen","resultScreen","toast",
  "playerHpFill","enemyHpFill","playerHpText","enemyHpText","stageTitle","stageInfo","gaugeText","gaugeInner","actionButtons",
  "bossBar","bossName","bossInner",
  "statStage","statCoins","statTickets","statOwned","statBest",
- "playBtn","survivalBtn","openUnitsBtn","openShopBtn","openGachaBtn","openSaveBtn","continueBtn","resetBtn",
+ "playBtn","survivalBtn","openUnitsBtn","openUpgradeBtn","openShopBtn","openCodexBtn","openGachaBtn","openSaveBtn","continueBtn","resetBtn","adminCodeInput","adminCodeBtn",
  "mapBackBtn","startNextBtn","mapGrid",
- "unitsBackBtn","unitsToGachaBtn","unitsGrid",
+ "unitsBackBtn","unitsToGachaBtn","deckAutoBtn","deckCountText","unitsGrid","upgradeBackBtn","upgradeDeckBtn","upgradeCoinText","upgradeGrid","codexBackBtn","codexDeckBtn","codexGrid",
  "shopBackBtn","shopToGachaBtn","shopGrid",
- "gachaTickets","gachaCoins","gachaOwned","gachaSpecial","gachaText","normalGachaBtn","legendGachaBtn","gachaShopBtn","gachaBackBtn",
+ "gachaTickets","gachaCoins","gachaOwned","gachaSpecial","gachaStage","gachaCapsule","gachaText","gachaRarity","gachaCutin","normalGachaBtn","legendGachaBtn","gachaShopBtn","gachaBackBtn",
  "saveBackBtn","makeCodeBtn","copyCodeBtn","loadCodeBtn","saveBox",
- "resultTitle","resultText","scoreTotal","scoreCoins","scoreKills","scoreTime","resultMenuBtn","resultNextBtn",
+ "resultTitle","resultText","resultStars","resultMissions","scoreTotal","scoreCoins","scoreKills","scoreTime","resultMenuBtn","resultNextBtn",
  "speedBtn","pauseBtn","homeBtn"
 ].forEach(id => el[id] = document.getElementById(id));
 
@@ -453,15 +725,23 @@ const UNITS = {
   silo:{label:"ミサイルサイロ",icon:"▧",type:"deploy",cost:17,role:"伝説・自動砲台",legend:true},
 
   infinityMage:{label:"無限術師",icon:"◎",type:"unit",cost:50,role:"特別・20秒ごとに巨大な紫球体",hp:960,atk:0,range:280,speed:28,cooldown:20,special:"purple",color:"#f1efff",specialUnit:true},
+  voidRanger:{label:"虚空レンジャー",icon:"◇",type:"unit",cost:11,role:"サバイバル限定・貫通射撃",hp:150,atk:48,range:210,speed:42,cooldown:1.18,splash:26,color:"#d6b3ff",legend:true},
+
+  enemyFast:{label:"高速敵",icon:"»",type:"enemy",hp:76,atk:16,range:70,speed:82,cooldown:.72,color:"#ff9f6e"},
+  enemyHealer:{label:"回復敵",icon:"＋",type:"enemy",hp:120,atk:8,heal:18,range:125,speed:34,cooldown:1.2,color:"#ffbdd2"},
+  enemyBomber:{label:"自爆敵",icon:"●",type:"enemy",hp:105,atk:90,range:36,speed:45,cooldown:1.1,splash:100,color:"#ffcf6e",bomber:true},
+  enemySniper:{label:"遠距離敵",icon:"⌖",type:"enemy",hp:88,atk:34,range:230,speed:25,cooldown:1.7,color:"#ff8cba"},
+  skyDrone:{label:"空中敵",icon:"✧",type:"enemy",hp:95,atk:22,range:150,speed:52,cooldown:1.05,color:"#ffa8ff",flying:true},
 
   bossCrusher:{label:"装甲破砕ボス",icon:"▣",type:"boss",hp:1500,atk:58,range:170,speed:17,cooldown:1.7,splash:52,color:"#ff7a63"},
   bossStorm:{label:"嵐砲台ボス",icon:"◎",type:"boss",hp:2200,atk:72,range:220,speed:12,cooldown:1.55,splash:70,color:"#ffd76a"},
   bossVoid:{label:"終極コア",icon:"◉",type:"boss",hp:3400,atk:92,range:250,speed:9,cooldown:1.42,splash:90,color:"#ff7bdc"}
 };
 
-const ORDER = ["rifle","shield","tank","rocket","medic","air","wall","repair","pulse","emp","plasma","laser","orbital","silo","infinityMage"];
+const ORDER = ["rifle","shield","tank","rocket","medic","air","wall","repair","pulse","emp","plasma","laser","orbital","silo","voidRanger","infinityMage"];
 const NORMAL_POOL = ["shield","tank","rocket","medic","air","wall","repair"];
 const LEGEND_POOL = ["pulse","emp","plasma","laser","orbital","silo"];
+const ENEMY_KEYS = ["enemyFast","enemyHealer","enemyBomber","enemySniper","skyDrone"];
 const BOSS_KEYS = ["bossCrusher","bossStorm","bossVoid"];
 
 const SHOP_ITEMS = [
@@ -477,18 +757,27 @@ let landscape = createLandscape();
 let save = loadSave();
 
 function defaultSave(){
-  return {stage:1,lastStage:1,coins:1800,tickets:14,owned:{rifle:true},bestSurvival:0,bestScore:{},shopBought:{}};
+  return {stage:1,lastStage:1,coins:1800,tickets:14,materials:0,owned:{rifle:true},deck:["rifle"],upgrades:{},stars:{},survivalRewards:{},bestSurvival:0,bestScore:{},shopBought:{}};
 }
 function normalizeSave(s){
   const d=defaultSave();
   s=Object.assign({},d,s||{});
   s.owned=Object.assign({rifle:true},s.owned||{});
+  s.owned.rifle=true;
   s.bestScore=s.bestScore||{};
+  s.stars=s.stars||{};
+  s.upgrades=s.upgrades||{};
+  s.survivalRewards=s.survivalRewards||{};
   s.shopBought=s.shopBought||{};
+  s.usedAdminCodes=s.usedAdminCodes||{};
+  s.deck=Array.isArray(s.deck)?s.deck:["rifle"];
+  s.deck=[...new Set(s.deck)].filter(k=>UNITS[k]&&s.owned[k]&&UNITS[k].type!=="boss").slice(0,10);
+  if(!s.deck.length)s.deck=["rifle"];
   s.stage=clamp(Number(s.stage)||1,1,MAX_STAGE);
   s.lastStage=clamp(Number(s.lastStage)||s.stage||1,1,MAX_STAGE);
   s.coins=Math.max(0,Number(s.coins)||0);
   s.tickets=Math.max(0,Number(s.tickets)||0);
+  s.materials=Math.max(0,Number(s.materials)||0);
   s.bestSurvival=Number(s.bestSurvival)||0;
   return s;
 }
@@ -546,17 +835,111 @@ function showToast(text){
 }
 function showScreen(name){
   screen=name;
-  [["menuScreen","menu"],["mapScreen","map"],["unitsScreen","units"],["shopScreen","shop"],["gachaScreen","gacha"],["saveScreen","save"],["resultScreen","result"]]
+  [["menuScreen","menu"],["mapScreen","map"],["unitsScreen","units"],["upgradeScreen","upgrade"],["codexScreen","codex"],["shopScreen","shop"],["gachaScreen","gacha"],["saveScreen","save"],["resultScreen","result"]]
   .forEach(([id,n])=>el[id].classList.toggle("hidden",name!==n));
   el.battleHud.classList.toggle("hidden",name!=="battle");
   if(name!=="battle") el.bossBar.classList.add("hidden");
   if(name==="menu") renderMenu();
   if(name==="map") renderMap();
   if(name==="units") renderUnits();
+  if(name==="upgrade") renderUpgrade();
+  if(name==="codex") renderCodex();
   if(name==="shop") renderShop();
   if(name==="gacha") renderGacha();
   updateBattleUI();
 }
+
+const ADMIN_CODES = {
+  "7394": "starter",
+  "4827": "coins",
+  "9156": "tickets",
+  "2608": "normal",
+  "6043": "legend",
+  "1379": "special",
+  "8261": "all",
+  "3905": "power",
+  "5718": "maxres",
+  "7482": "complete"
+};
+
+function applyAdminReward(type){
+  if(type==="starter"){
+    save.coins += 12000;
+    save.tickets += 30;
+    ["tank","rocket","medic","air","wall","repair"].forEach(k=>save.owned[k]=true);
+  }
+  if(type==="coins") save.coins += 50000;
+  if(type==="tickets") save.tickets += 100;
+  if(type==="normal") NORMAL_POOL.forEach(k=>save.owned[k]=true);
+  if(type==="legend") LEGEND_POOL.forEach(k=>save.owned[k]=true);
+  if(type==="special") save.owned.infinityMage = true;
+  if(type==="all"){
+    ORDER.forEach(k=>save.owned[k]=true);
+    save.coins += 30000;
+    save.tickets += 50;
+  }
+  if(type==="power"){
+    ORDER.forEach(k=>save.owned[k]=true);
+    save.coins += 99999;
+  }
+  if(type==="maxres"){
+    save.coins = 999999;
+    save.tickets = 9999;
+    save.materials = 999;
+    ORDER.forEach(k=>save.upgrades[k]=20);
+    for(let i=1;i<=MAX_STAGE;i++)save.stars[i]=3;
+  }
+  if(type==="complete"){
+    ORDER.forEach(k=>save.owned[k]=true);
+    save.stage = MAX_STAGE;
+    save.lastStage = MAX_STAGE;
+    save.coins = 999999;
+    save.tickets = 9999;
+  }
+  const priority=["rifle","shield","tank","rocket","medic","pulse","emp","plasma","infinityMage","air","repair","wall","laser","orbital","silo"];
+  save.deck=[];
+  for(const key of priority){
+    if(save.owned[key]&&UNITS[key]&&UNITS[key].type!=="boss"&&save.deck.length<10)save.deck.push(key);
+  }
+  if(!save.deck.length)save.deck=["rifle"];
+}
+
+function applyAdminCode(){
+  const code=(el.adminCodeInput&&el.adminCodeInput.value||"").trim();
+  const type=ADMIN_CODES[code];
+  if(!type){
+    showToast("コードが違います");
+    return;
+  }
+  save.usedAdminCodes = save.usedAdminCodes || {};
+  if(save.usedAdminCodes[code]){
+    showToast("適用済みです");
+    return;
+  }
+  save.usedAdminCodes[code] = true;
+  applyAdminReward(type);
+  writeSave();
+  if(el.adminCodeInput) el.adminCodeInput.value="";
+  renderMenu();
+  showToast("管理者コードを適用しました");
+}
+
+
+function autoDeck(){
+  save=normalizeSave(save);
+  const priority=["rifle","shield","tank","rocket","medic","pulse","emp","plasma","infinityMage","air","repair","wall","laser","orbital","silo"];
+  save.deck=[];
+  for(const key of priority){
+    if(save.owned[key]&&UNITS[key]&&UNITS[key].type!=="boss"&&save.deck.length<10){
+      save.deck.push(key);
+    }
+  }
+  if(!save.deck.length) save.deck=["rifle"];
+  writeSave();
+  renderUnits();
+  showToast("おすすめデッキにしました");
+}
+
 function renderMenu(){
   el.statStage.textContent=save.stage;
   el.statCoins.textContent=save.coins;
@@ -575,7 +958,8 @@ function renderMap(){
     const open=i<=save.stage, clear=i<save.stage;
     btn.className="stageNode "+(clear?"clear":open?"open":"lock");
     const boss = [3,6,7].includes(i) ? "BOSS" : "NORMAL";
-    btn.innerHTML=`STAGE ${i}<br><span class="menuMini">${stageName(i)} / ${boss}<br>${clear?"CLEAR":open?"OPEN":"LOCK"}</span>`;
+    const star="★".repeat(save.stars[i]||0)+"☆".repeat(3-(save.stars[i]||0));
+    btn.innerHTML=`STAGE ${i}<br><span class="menuMini">${stageName(i)} / ${boss}<br>${clear?"CLEAR":open?"OPEN":"LOCK"}<br>${star}</span>`;
     btn.disabled=!open;
     btn.onclick=()=>startStage(i,false);
     el.mapGrid.appendChild(btn);
@@ -587,18 +971,106 @@ function renderMap(){
   el.mapGrid.appendChild(s);
 }
 function renderUnits(){
+  save=normalizeSave(save);
   el.unitsGrid.innerHTML="";
+  if(el.deckCountText) el.deckCountText.textContent=`デッキ ${save.deck.length} / 10`;
   for(const key of ORDER){
-    const it=UNITS[key],owned=!!save.owned[key];
+    const it=UNITS[key],owned=!!save.owned[key],inDeck=save.deck.includes(key);
     const card=document.createElement("div");
-    card.className="itemCard "+(owned?"":"locked")+" "+(it.specialUnit?"special":it.legend?"legendary":"");
+    card.className="itemCard "+(owned?"":"locked")+" "+(it.specialUnit?"special":it.legend?"legendary":"")+" "+(inDeck?"inDeck":"");
     card.innerHTML=`<div class="itemIcon">${it.icon}</div>
       <div class="itemInfo"><b>${it.label}</b><span>${it.role}<br>${owned?"所持中":"未所持"} / コスト ${it.cost??"-"}G</span></div>`;
     const btn=document.createElement("button");
-    btn.textContent=owned?"所持中":"未所持";btn.disabled=true;
-    card.appendChild(btn);el.unitsGrid.appendChild(card);
+    if(!owned){
+      btn.textContent="未所持";
+      btn.disabled=true;
+    }else if(inDeck){
+      btn.textContent="外す";
+      btn.onclick=()=>{
+        if(save.deck.length<=1){
+          showToast("最低1つは必要です");
+          return;
+        }
+        save.deck=save.deck.filter(k=>k!==key);
+        writeSave();
+        renderUnits();
+      };
+    }else{
+      btn.textContent="入れる";
+      btn.onclick=()=>{
+        if(save.deck.length>=10){
+          showToast("デッキは最大10個です");
+          return;
+        }
+        save.deck.push(key);
+        writeSave();
+        renderUnits();
+      };
+    }
+    card.appendChild(btn);
+    el.unitsGrid.appendChild(card);
   }
 }
+
+function upgradeCost(key){
+  const lv=save.upgrades[key]||0;
+  return 250+lv*180+(UNITS[key].legend?180:0)+(UNITS[key].specialUnit?600:0);
+}
+function renderUpgrade(){
+  save=normalizeSave(save);
+  el.upgradeCoinText.textContent=`${save.coins} COIN / 素材 ${save.materials||0}`;
+  el.upgradeGrid.innerHTML="";
+  for(const key of ORDER){
+    const it=UNITS[key];
+    if(!save.owned[key]) continue;
+    const lv=save.upgrades[key]||0;
+    const cost=upgradeCost(key);
+    const card=document.createElement("div");
+    card.className="itemCard "+(it.specialUnit?"special":it.legend?"legendary":"");
+    card.innerHTML=`<div class="itemIcon">${it.icon}</div>
+      <div class="itemInfo"><b>${it.label}<span class="upgradeLv">Lv.${lv}</span></b>
+      <span>HP・攻撃・回復を強化<br>必要 ${cost} COIN</span></div>`;
+    const btn=document.createElement("button");
+    btn.textContent=save.coins>=cost?"強化":"不足";
+    btn.disabled=save.coins<cost;
+    btn.onclick=()=>{
+      if(save.coins<cost)return;
+      save.coins-=cost;
+      save.upgrades[key]=(save.upgrades[key]||0)+1;
+      writeSave();
+      renderUpgrade();
+      renderMenu();
+      showToast(`${it.label} Lv.${save.upgrades[key]}`);
+    };
+    card.appendChild(btn);
+    el.upgradeGrid.appendChild(card);
+  }
+}
+function rarityName(key){
+  const it=UNITS[key];
+  if(it.specialUnit)return "SPECIAL";
+  if(it.legend)return "LEGEND";
+  if(it.type==="boss")return "BOSS";
+  if(it.type==="enemy")return "ENEMY";
+  return "NORMAL";
+}
+function renderCodex(){
+  el.codexGrid.innerHTML="";
+  const keys=[...ORDER,...ENEMY_KEYS,...BOSS_KEYS];
+  for(const key of keys){
+    const it=UNITS[key];
+    const owned=save.owned[key]||it.type==="enemy"||it.type==="boss";
+    const card=document.createElement("div");
+    card.className="itemCard "+(owned?"":"locked")+" "+(it.specialUnit?"special":it.legend?"legendary":"");
+    const cost=it.cost!==undefined?it.cost:"-";
+    const tag=it.type==="enemy"||it.type==="boss"?`<span class="enemyTag">${rarityName(key)}</span>`:`<span class="upgradeLv">${rarityName(key)}</span>`;
+    card.innerHTML=`<div class="itemIcon">${it.icon}</div>
+      <div class="itemInfo"><b>${it.label}${tag}</b>
+      <span>HP ${it.hp||"-"} / 攻撃 ${it.atk||"-"} / コスト ${cost}<br>${it.role||"敵専用"}<br>${owned?"確認済み":"未所持"}</span></div>`;
+    el.codexGrid.appendChild(card);
+  }
+}
+
 function renderShop(){
   el.shopGrid.innerHTML="";
   for(const item of SHOP_ITEMS){
@@ -625,6 +1097,11 @@ function renderGacha(){
   el.gachaSpecial.textContent=save.owned.infinityMage?"所持済":"未所持";
   el.normalGachaBtn.disabled=save.tickets<1;
   el.legendGachaBtn.disabled=save.tickets<5;
+  if(el.gachaStage&&!el.gachaStage.classList.contains("play")){
+    el.gachaStage.classList.remove("legend","special");
+    if(el.gachaRarity)el.gachaRarity.textContent="READY";
+    if(el.gachaCapsule)el.gachaCapsule.textContent="🎫";
+  }
 }
 
 function getStageConfig(id,survival){
@@ -645,7 +1122,9 @@ function getStageConfig(id,survival){
 
 function createActionButtons(){
   el.actionButtons.innerHTML="";
-  ORDER.filter(k=>save.owned[k]).forEach(key=>{
+  save=normalizeSave(save);
+  const battleDeck = save.deck.filter(k=>save.owned[k]&&UNITS[k]&&UNITS[k].type!=="boss").slice(0,10);
+  battleDeck.forEach(key=>{
     const item=UNITS[key];
     const btn=document.createElement("button");
     btn.dataset.key=key;
@@ -657,11 +1136,13 @@ function createActionButtons(){
   });
 }
 function startStage(id,survival){
+  save=normalizeSave(save);
   const config=getStageConfig(id,survival);
   battle={
     config,running:true,paused:false,ended:false,win:false,time:0,gauge:config.startGauge,gaugeMax:config.gaugeMax,gaugeTimer:0,
     playerHp:config.playerHp,enemyHp:config.enemyHp,units:[],projectiles:[],effects:[],texts:[],structures:[],
-    enemySpawnTimer:1.4,kills:0,score:0,wave:1,bossSpawned:false,bossUnit:null,shake:0
+    enemySpawnTimer:1.4,kills:0,score:0,wave:1,bossSpawned:false,bossUnit:null,bossSkillTimer:5,shake:0,
+    stats:{spent:0,usedLegend:false,usedSpecial:false,bossDefeated:false}
   };
   save.lastStage=survival?save.lastStage:id;writeSave();
   createActionButtons();showScreen("battle");
@@ -671,6 +1152,9 @@ function useAction(key){
   const item=UNITS[key];
   if(battle.gauge<item.cost){showToast("ゲージ不足");return}
   battle.gauge-=item.cost;
+  battle.stats.spent+=item.cost;
+  if(item.legend) battle.stats.usedLegend=true;
+  if(item.specialUnit) battle.stats.usedSpecial=true;
   if(item.type==="unit"||item.specialUnit) spawnUnit(key,"player",BASE_PLAYER_X+32);
   else if(key==="air") useAirstrike();
   else if(key==="repair") {
@@ -691,12 +1175,15 @@ function spawnUnit(type,side,x){
   const legendMul=base.legend?1.5:1;
   const enemyMul=side==="enemy"?battle.config.enemyMul:1;
   const bossMul=base.type==="boss"?1:1;
+  const up=side==="player"?(save.upgrades[type]||0):0;
+  const upHp=1+up*.10;
+  const upAtk=1+up*.12;
   battle.units.push({
     type,side,x,y:GROUND_Y,
-    hp:(base.hp||100)*legendMul*enemyMul*bossMul,
-    maxHp:(base.hp||100)*legendMul*enemyMul*bossMul,
-    atk:(base.atk||0)*legendMul*enemyMul,
-    heal:(base.heal||0)*legendMul,
+    hp:(base.hp||100)*legendMul*enemyMul*bossMul*upHp,
+    maxHp:(base.hp||100)*legendMul*enemyMul*bossMul*upHp,
+    atk:(base.atk||0)*legendMul*enemyMul*upAtk,
+    heal:(base.heal||0)*legendMul*upAtk,
     range:base.range||100,
     speed:(base.speed||30)*(side==="enemy"?.96:1),
     cooldown:base.cooldown||1,
@@ -704,25 +1191,34 @@ function spawnUnit(type,side,x){
     splash:(base.splash||0)*legendMul,
     slow:base.slow||0,
     color:base.color||"#fff",
-    width:type==="tank"||type==="plasma"?58:base.type==="boss"?84:type==="shield"?34:type==="infinityMage"?48:26,
-    height:base.type==="boss"?86:type==="tank"||type==="plasma"?42:type==="infinityMage"?80:54,
+    width:type==="tank"||type==="plasma"?58:base.type==="boss"?84:type==="shield"?34:type==="infinityMage"?48:(base.flying?30:26),
+    height:base.type==="boss"?86:type==="tank"||type==="plasma"?42:type==="infinityMage"?80:(base.flying?46:54),
     debuff:0,boss:base.type==="boss"
   });
-  if(base.type==="boss"){battle.bossUnit=battle.units[battle.units.length-1];battle.shake=12;addText(x,GROUND_Y-180,"BOSS WARNING","#ff6176")}
+  if(base.type==="boss"){battle.bossUnit=battle.units[battle.units.length-1];battle.shake=0;addText(x,GROUND_Y-180,"BOSS WARNING","#ff6176")}
 }
 function getEnemySpawnType(){
   if(battle.config.survival){
     const w=battle.wave,r=Math.random();
-    if(w>=14&&r<.12)return "bossCrusher";
-    if(w>=9&&r<.22)return "tank";
-    if(w>=6&&r<.40)return "rocket";
-    if(w>=3&&r<.62)return "shield";
+    if(w>=14&&r<.10)return "enemySniper";
+    if(w>=11&&r<.18)return "skyDrone";
+    if(w>=9&&r<.28)return "enemyBomber";
+    if(w>=7&&r<.38)return "enemyHealer";
+    if(w>=5&&r<.52)return "enemyFast";
+    if(w>=9&&r<.64)return "tank";
+    if(w>=6&&r<.78)return "rocket";
+    if(w>=3&&r<.90)return "shield";
     return "rifle";
   }
   const id=battle.config.id,r=Math.random();
-  if(id>=6&&r<.14)return "tank";
-  if(id>=4&&r<.34)return "rocket";
-  if(id>=2&&r<.60)return "shield";
+  if(id>=7&&r<.12)return "enemySniper";
+  if(id>=6&&r<.22)return "skyDrone";
+  if(id>=5&&r<.34)return "enemyBomber";
+  if(id>=4&&r<.46)return "enemyHealer";
+  if(id>=3&&r<.58)return "enemyFast";
+  if(id>=6&&r<.68)return "tank";
+  if(id>=4&&r<.82)return "rocket";
+  if(id>=2&&r<.94)return "shield";
   return "rifle";
 }
 function enemyAI(dt){
@@ -764,7 +1260,7 @@ function nearestAllyToHeal(u){
   return {target:best,dist};
 }
 function unitAttack(u,target){
-  if(u.type==="medic"){
+  if(u.type==="medic"||u.type==="enemyHealer"){
     const h=nearestAllyToHeal(u);
     if(h.target&&h.dist<=u.range){
       h.target.hp=Math.min(h.target.maxHp,h.target.hp+u.heal);
@@ -791,7 +1287,7 @@ function firePurple(u){
   battle.projectiles.push({kind:"purple",side:"player",x:u.x+50,y:u.y-78,vx:420,r:54,life:4.2,color:"#a348ff"});
   addText(u.x+82,u.y-176,"紫極弾","#d9a8ff");
   battle.effects.push({type:"flash",time:.55,life:.55,color:"rgba(181,124,255,.27)"});
-  battle.shake=18;
+  battle.shake=0;
   for(let i=0;i<28;i++){
     battle.effects.push({type:"orbit",x:u.x,y:u.y-78,ang:i/28*Math.PI*2,rad:20+i%5*5,color:i%2?"#ffffff":"#c687ff",life:.7});
   }
@@ -802,7 +1298,7 @@ function useAirstrike(){
   for(const u of battle.units){
     if(u.side==="enemy"){u.hp-=95;burst(u.x,u.y-20,42,"#ffd76a")}
   }
-  battle.enemyHp=Math.max(0,battle.enemyHp-80);battle.shake=10;
+  battle.enemyHp=Math.max(0,battle.enemyHp-80);battle.shake=0;
 }
 function useLegendLaser(){
   addText(FIELD_W*.62,GROUND_Y-270,"レーザードローン","#9de7ff");
@@ -823,7 +1319,7 @@ function useOrbital(){
   for(const u of battle.units){
     if(u.side==="enemy"&&Math.abs(u.x-FIELD_W*.58)<190){u.hp-=280;burst(u.x,u.y-25,50,"#fff2b8")}
   }
-  battle.enemyHp=Math.max(0,battle.enemyHp-180);battle.shake=16;
+  battle.enemyHp=Math.max(0,battle.enemyHp-180);battle.shake=0;
 }
 function lineFx(x1,y1,x2,y2,color,life,thick){battle.effects.push({type:"line",x1,y1,x2,y2,color,life,thick})}
 function burst(x,y,r,color){battle.effects.push({type:"burst",x,y,r,color,life:.32})}
@@ -852,7 +1348,15 @@ function updateUnits(dt){
     const {target,dist}=nearestEnemy(u);
     const enemyBaseX=u.side==="player"?BASE_ENEMY_X:BASE_PLAYER_X;
     if(target&&dist<=u.range){
-      if(u.cd<=0)unitAttack(u,target);
+      if(u.type==="enemyBomber"&&u.cd<=0){
+        burst(u.x,u.y-30,90,"#ffcf6e");
+        for(const e of battle.units){
+          if(e.side!==u.side&&Math.abs(e.x-u.x)<110)e.hp-=95;
+        }
+        battle.playerHp=Math.max(0,battle.playerHp-40);
+        u.hp=0;
+        u.cd=999;
+      }else if(u.cd<=0)unitAttack(u,target);
     }else{
       const dir=u.side==="player"?1:-1;
       const sp=u.speed*(u.debuff>0?.55:1);
@@ -869,7 +1373,7 @@ function updateUnits(dt){
   }
   battle.units=battle.units.filter(u=>{
     if(u.hp>0)return true;
-    if(u.side==="enemy"){battle.kills++;if(u.boss){battle.bossUnit=null;addText(u.x,u.y-170,"BOSS DOWN","#ffd76a");battle.shake=18}}
+    if(u.side==="enemy"){battle.kills++;if(u.boss){battle.bossUnit=null;battle.stats.bossDefeated=true;addText(u.x,u.y-170,"BOSS DOWN","#ffd76a");battle.shake=0}}
     burst(u.x,u.y-20,u.boss?70:32,u.side==="player"?"#7cdcff":"#ff8a78");
     return false;
   });
@@ -889,7 +1393,7 @@ function updateProjectiles(dt){
       if(Math.abs(BASE_ENEMY_X-p.x)<84){
         battle.enemyHp=Math.max(0,battle.enemyHp-760);p.life=0;
       }
-      if(p.life<=0||p.x>FIELD_W+120){burst(p.x,p.y,110,"#b65cff");battle.shake=16}
+      if(p.life<=0||p.x>FIELD_W+120){burst(p.x,p.y,110,"#b65cff");battle.shake=0}
       continue;
     }
     const dx=p.tx-p.x,dy=p.ty-p.y,d=Math.hypot(dx,dy)||1,t=Math.min(1,(p.speed*dt)/d);
@@ -915,13 +1419,13 @@ function updateProjectiles(dt){
         else battle.playerHp=Math.max(0,battle.playerHp-p.damage);
       }
       burst(p.x,p.y,p.splash?38:18,p.color);
-      if(p.splash)battle.shake=Math.max(battle.shake,5);
+      if(p.splash)battle.shake=0;
     }
   }
   battle.projectiles=battle.projectiles.filter(p=>!p.done&&(p.kind!=="purple"||p.life>0));
 }
 function updateEffects(dt){
-  battle.shake=Math.max(0,battle.shake-dt*20);
+  battle.shake=0;
   for(const e of battle.effects){
     e.life=(e.life??e.time??.3)-dt;e.time=(e.time??0)-dt;
     if(e.type==="orbit"){e.ang+=dt*7;e.rad+=dt*80}
@@ -934,25 +1438,101 @@ function updateGauge(dt){
   battle.gaugeTimer+=dt;
   while(battle.gaugeTimer>=1){battle.gaugeTimer-=1;battle.gauge=Math.min(battle.gaugeMax,battle.gauge+1)}
 }
+
+function updateBossSkills(dt){
+  const boss=battle.bossUnit&&battle.bossUnit.hp>0?battle.bossUnit:null;
+  if(!boss)return;
+  battle.bossSkillTimer-=dt;
+  if(battle.bossSkillTimer>0)return;
+  battle.bossSkillTimer=boss.type==="bossVoid"?6:boss.type==="bossStorm"?5:7;
+  if(boss.type==="bossCrusher"){
+    addText(boss.x,boss.y-150,"衝撃波","#ffb35c");
+    lineFx(boss.x-40,GROUND_Y-110,boss.x-330,GROUND_Y-110,"#ffb35c",.35,10);
+    for(const u of battle.units){
+      if(u.side==="player"&&Math.abs(u.x-boss.x)<360){
+        u.hp-=70;
+        u.x=Math.max(BASE_PLAYER_X+80,u.x-90);
+        u.debuff=Math.max(u.debuff,1.2);
+      }
+    }
+  }else if(boss.type==="bossStorm"){
+    addText(boss.x,boss.y-160,"ミサイル連射","#ffd76a");
+    const targets=battle.units.filter(u=>u.side==="player");
+    for(let i=0;i<4;i++){
+      const t=targets.length?choice(targets):null;
+      setTimeout(()=>{
+        if(!battle||battle.ended)return;
+        const tx=t?t.x:BASE_PLAYER_X;
+        battle.projectiles.push({kind:"shot",sourceType:"bossStorm",side:"enemy",x:boss.x,y:boss.y-120,tx,ty:GROUND_Y-70,damage:55,splash:70,slow:0,color:"#ffd76a",speed:260,r:9});
+      },i*180);
+    }
+  }else if(boss.type==="bossVoid"){
+    addText(boss.x,boss.y-170,"全体レーザー","#ff7bdc");
+    lineFx(boss.x-20,80,BASE_PLAYER_X,GROUND_Y-45,"#ff7bdc",.7,14);
+    battle.playerHp=Math.max(0,battle.playerHp-110);
+    for(const u of battle.units){
+      if(u.side==="player"){u.hp-=55;u.debuff=Math.max(u.debuff,1.6)}
+    }
+  }
+}
+
 function updateBattle(dt){
   if(toastTime>0){toastTime-=dt;if(toastTime<=0)el.toast.classList.add("hidden")}
   if(!battle)return;
   if(screen!=="battle"||battle.paused||battle.ended)return;
   battle.time+=dt;
-  updateGauge(dt);enemyAI(dt);updateUnits(dt);updateProjectiles(dt);updateEffects(dt);
+  updateGauge(dt);enemyAI(dt);updateBossSkills(dt);updateUnits(dt);updateProjectiles(dt);updateEffects(dt);
   if(battle.config.survival) battle.score=Math.floor(battle.time*18+battle.kills*90+battle.wave*160);
   else battle.score=Math.floor((battle.config.enemyHp-battle.enemyHp)*.62+battle.kills*90+Math.max(0,520-battle.time*4));
   if(!battle.config.survival&&battle.enemyHp<=0)finishBattle(true);
   else if(battle.playerHp<=0)finishBattle(false);
   updateBattleUI();
 }
+
+function calcStars(win){
+  if(!win||battle.config.survival)return 0;
+  let stars=1;
+  if(battle.time<=90)stars++;
+  if(battle.playerHp/battle.config.playerHp>=.5)stars++;
+  return stars;
+}
+function getMissionText(win){
+  const m=[];
+  if(battle.config.survival){
+    if(battle.wave>=10)m.push("サバイバルWAVE10到達");
+    if(battle.kills>=30)m.push("30体撃破");
+    if(!battle.stats.usedSpecial)m.push("特別ユニットなし");
+    if(battle.stats.spent<=120)m.push("コスト120以内");
+  }else{
+    if(win)m.push("ステージクリア");
+    if(battle.kills>=30)m.push("30体撃破");
+    if(battle.stats.bossDefeated)m.push("ボス撃破");
+    if(!battle.stats.usedLegend)m.push("伝説ユニットなし");
+    if(battle.stats.spent<=50)m.push("コスト50以内");
+  }
+  return m.length?`ミッション達成：\n${m.map(x=>"・"+x).join("\n")}`:"ミッション達成なし";
+}
+function giveSurvivalRewards(wave){
+  const got=[];
+  save.survivalRewards=save.survivalRewards||{};
+  if(wave>=5&&!save.survivalRewards.w5){save.survivalRewards.w5=true;save.coins+=500;got.push("WAVE5 コイン+500")}
+  if(wave>=10&&!save.survivalRewards.w10){save.survivalRewards.w10=true;save.tickets+=3;got.push("WAVE10 チケット+3")}
+  if(wave>=15&&!save.survivalRewards.w15){save.survivalRewards.w15=true;save.materials=(save.materials||0)+5;got.push("WAVE15 強化素材+5")}
+  if(wave>=20&&!save.survivalRewards.w20){save.survivalRewards.w20=true;save.owned.voidRanger=true;if(save.deck.length<10)save.deck.push("voidRanger");got.push("WAVE20 虚空レンジャー解放")}
+  return got;
+}
+
 function finishBattle(win){
   if(!battle||battle.ended)return;
   battle.ended=true;battle.win=win;
   let rewardCoins=0;
+  let extraRewardText="";
+  let stars=0;
   if(battle.config.survival){
     rewardCoins=Math.max(20,Math.floor(battle.score/18));
     save.coins+=rewardCoins;save.bestSurvival=Math.max(save.bestSurvival,battle.score);
+    const rewards=giveSurvivalRewards(battle.wave);
+    extraRewardText=rewards.length?"\n"+rewards.join("\n"):"";
   }else if(win){
     rewardCoins=130+battle.config.id*85+([3,6,7].includes(battle.config.id)?180:0);
     save.coins+=rewardCoins;
@@ -960,12 +1540,16 @@ function finishBattle(win){
     save.lastStage=Math.min(MAX_STAGE,battle.config.id+1);
     if([3,6].includes(battle.config.id))save.tickets+=1;
     if(battle.config.id===7)save.tickets+=3;
+    stars=calcStars(win);
+    save.stars[battle.config.id]=Math.max(save.stars[battle.config.id]||0,stars);
   }else{
     rewardCoins=Math.max(18,Math.floor(battle.score/35));save.coins+=rewardCoins;
   }
   writeSave();
   el.resultTitle.textContent=battle.config.survival?"サバイバル終了":(win?"勝利！":"敗北...");
-  el.resultText.textContent=battle.config.survival?`到達WAVE ${battle.wave}\nスコア ${battle.score}`:(win?`${stageName(battle.config.id)} をクリア！`:"拠点が破壊されました");
+  el.resultText.textContent=battle.config.survival?`到達WAVE ${battle.wave}\nスコア ${battle.score}${extraRewardText}`:(win?`${stageName(battle.config.id)} をクリア！`:"拠点が破壊されました");
+  el.resultStars.textContent=stars?("★".repeat(stars)+"☆".repeat(3-stars)):"";
+  el.resultMissions.textContent=getMissionText(win);
   el.scoreTotal.textContent=battle.score;el.scoreCoins.textContent="+"+rewardCoins;el.scoreKills.textContent=battle.kills;el.scoreTime.textContent=Math.floor(battle.time)+"s";
   el.resultMenuBtn.onclick=()=>showScreen("menu");
   el.resultNextBtn.textContent=battle.config.survival?"もう一度":(win?"次へ":"リトライ");
@@ -1009,8 +1593,8 @@ function drawSky(theme){
 function worldToScreenX(x){return x/FIELD_W*W}
 function drawBattlefield(){
   const theme=battle?battle.config.theme:"grass";
-  const sx=battle&&battle.shake?(Math.random()-.5)*battle.shake:0;
-  const sy=battle&&battle.shake?(Math.random()-.5)*battle.shake:0;
+  const sx=0;
+  const sy=0;
   ctx.save();ctx.translate(sx,sy);
   drawSky(theme);
   drawBackground(theme);
@@ -1167,38 +1751,91 @@ function loop(now){
   requestAnimationFrame(loop);
 }
 
+
+function gachaFlash(kind, itemLabel){
+  const stage=el.gachaStage;
+  const cap=el.gachaCapsule;
+  const rarity=el.gachaRarity;
+  const cutin=el.gachaCutin;
+  if(!stage||!cap)return;
+
+  stage.classList.remove("legend","special","play");
+  void stage.offsetWidth;
+  if(kind==="legend")stage.classList.add("legend");
+  if(kind==="special")stage.classList.add("special");
+  stage.classList.add("play");
+
+  cap.textContent=kind==="special"?"◎":kind==="legend"?"✦":"🎫";
+  rarity.textContent=kind==="special"?"SPECIAL 0.1%":kind==="legend"?"★★★★★ LEGEND":"★★ NORMAL";
+  cutin.textContent=kind==="special"?"SPECIAL AWAKEN":kind==="legend"?"LEGEND": "OPEN";
+
+  const flashColor=kind==="special"?"rgba(181,124,255,.55)":kind==="legend"?"rgba(255,215,106,.44)":"rgba(103,214,255,.36)";
+  try{
+    stage.animate([
+      {filter:"brightness(1) saturate(1)", transform:"scale(1)"},
+      {filter:"brightness(1.8) saturate(1.5)", transform:"scale(1.025)"},
+      {filter:"brightness(1) saturate(1)", transform:"scale(1)"}
+    ],{duration:900,easing:"ease-out"});
+    document.body.animate([
+      {backgroundColor:flashColor},
+      {backgroundColor:"transparent"}
+    ],{duration:700,easing:"ease-out"});
+    if(kind==="special"){
+      el.gachaText.animate([
+        {transform:"scale(.8)", opacity:.2, filter:"blur(3px)"},
+        {transform:"scale(1.18)", opacity:1, filter:"blur(0px)", textShadow:"0 0 28px #fff"},
+        {transform:"scale(1)", opacity:1, filter:"blur(0px)"}
+      ],{duration:1200,easing:"ease-out"});
+    }else{
+      el.gachaText.animate([
+        {transform:"translateY(10px)", opacity:.2},
+        {transform:"translateY(-4px)", opacity:1},
+        {transform:"translateY(0)", opacity:1}
+      ],{duration:700,easing:"ease-out"});
+    }
+  }catch(e){}
+  setTimeout(()=>stage.classList.remove("play"),1300);
+}
+
 function normalGacha(){
+  if(el.gachaStage&&el.gachaStage.classList.contains("play"))return;
   if(save.tickets<1){showToast("チケット不足");return}
   save.tickets-=1;
   const notOwned=NORMAL_POOL.filter(k=>!save.owned[k]);
   if(notOwned.length){
-    const picked=choice(notOwned);save.owned[picked]=true;el.gachaText.textContent=`通常ガチャ！\n${UNITS[picked].label} を獲得！`;
+    const picked=choice(notOwned);save.owned[picked]=true;if(save.deck.length<10)save.deck.push(picked);el.gachaText.textContent=`通常ガチャ！\n${UNITS[picked].label} を獲得！`;
   }else{save.coins+=240;el.gachaText.textContent=`通常ガチャ！\n重複だったので 240コイン獲得！`}
+  gachaFlash("normal");
   writeSave();renderGacha();renderMenu();
 }
 function legendGacha(){
+  if(el.gachaStage&&el.gachaStage.classList.contains("play"))return;
   if(save.tickets<5){showToast("チケット5枚必要");return}
   save.tickets-=5;
   if(Math.random()<.001){
     if(!save.owned.infinityMage){
-      save.owned.infinityMage=true;
-      el.gachaText.textContent=`★★★★★ 特別出現！\n無限術師 を獲得！\nコスト50 / 20秒ごとに巨大な紫球体`;
+      save.owned.infinityMage=true;if(save.deck.length<10)save.deck.push("infinityMage");
+      el.gachaText.textContent=`無限術師\nSPECIAL 獲得！`;
     }else{
       save.coins+=1400;el.gachaText.textContent=`★★★★★ 特別重複！\n1400コイン獲得！`;
     }
+    gachaFlash("special");
     writeSave();renderGacha();renderMenu();return;
   }
   const notOwned=LEGEND_POOL.filter(k=>!save.owned[k]);
   if(notOwned.length){
-    const picked=choice(notOwned);save.owned[picked]=true;el.gachaText.textContent=`★★★★★ LEGEND！\n${UNITS[picked].label} を獲得！`;
+    const picked=choice(notOwned);save.owned[picked]=true;if(save.deck.length<10)save.deck.push(picked);el.gachaText.textContent=`★★★★★ LEGEND！\n${UNITS[picked].label} を獲得！`;
   }else{save.coins+=650;el.gachaText.textContent=`★★★★★ LEGEND重複！\n650コイン獲得！`}
+  gachaFlash("legend");
   writeSave();renderGacha();renderMenu();
 }
 
 el.playBtn.onclick=()=>showScreen("map");
 el.survivalBtn.onclick=()=>startStage(0,true);
 el.openUnitsBtn.onclick=()=>showScreen("units");
+el.openUpgradeBtn.onclick=()=>showScreen("upgrade");
 el.openShopBtn.onclick=()=>showScreen("shop");
+el.openCodexBtn.onclick=()=>showScreen("codex");
 el.openGachaBtn.onclick=()=>showScreen("gacha");
 el.openSaveBtn.onclick=()=>showScreen("save");
 el.continueBtn.onclick=()=>startStage(save.lastStage,false);
@@ -1207,7 +1844,11 @@ el.resetBtn.onclick=()=>{if(confirm("セーブを初期化しますか？")){sav
 el.mapBackBtn.onclick=()=>showScreen("menu");
 el.startNextBtn.onclick=()=>startStage(save.stage,false);
 el.unitsBackBtn.onclick=()=>showScreen("menu");
-el.unitsToGachaBtn.onclick=()=>showScreen("gacha");
+el.deckAutoBtn.onclick=autoDeck;
+el.upgradeBackBtn.onclick=()=>showScreen("menu");
+el.upgradeDeckBtn.onclick=()=>showScreen("units");
+el.codexBackBtn.onclick=()=>showScreen("menu");
+el.codexDeckBtn.onclick=()=>showScreen("units");
 el.shopBackBtn.onclick=()=>showScreen("menu");
 el.shopToGachaBtn.onclick=()=>showScreen("gacha");
 el.gachaShopBtn.onclick=()=>showScreen("shop");
@@ -1223,6 +1864,8 @@ el.loadCodeBtn.onclick=()=>{try{loadSaveCode(el.saveBox.value);showToast("読み
 el.pauseBtn.onclick=()=>{if(!battle||battle.ended)return;battle.paused=!battle.paused;el.pauseBtn.textContent=battle.paused?"再開":"一時停止"};
 el.homeBtn.onclick=()=>{if(!battle)return;battle.paused=false;showScreen("menu")};
 el.speedBtn.onclick=()=>{battleSpeed=battleSpeed===1?1.5:battleSpeed===1.5?2:1;el.speedBtn.textContent=`速度 ${battleSpeed}x`};
+el.adminCodeBtn.onclick=applyAdminCode;
+el.adminCodeInput.onkeydown=e=>{if(e.key==="Enter")applyAdminCode()};
 
 renderMenu();showScreen("menu");requestAnimationFrame(loop);setInterval(writeSave,15000);
 })();
